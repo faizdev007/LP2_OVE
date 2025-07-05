@@ -1,0 +1,56 @@
+name: Deploy LP2 OVE App to Staging Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: FTP Upload
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🧾 Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: 🧩 Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.2
+          extensions: mbstring, intl, zip, fileinfo, curl
+          tools: composer:v2
+      
+      - name: Create temporary .env file for build
+        run: |
+          echo "APP_NAME=Laravel" > .env
+          echo "APP_ENV=local" >> .env
+          echo "APP_URL=http://localhost" >> .env
+          echo "APP_KEY=base64:dummyKeyForBuildOnlyDontUseInProd==" >> .env
+          echo "APP_DEBUG=false" >> .env
+          echo "LOG_CHANNEL=stack" >> .env
+
+      - name: 📦 Install Composer Dependencies
+        run: composer install --no-dev --optimize-autoloader
+
+      - name: 🚀 Upload via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_TARGET }}
+          local-dir: ./
+
+          exclude: |
+            storage/
+            public/storage/
+            vendor/
+            node_modules/
+            .git/
+            .github/
+            tests/
+            .env
+
+      - name: 🧹 Cleanup
+        run: rm -f .env
