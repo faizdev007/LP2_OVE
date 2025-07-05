@@ -52,8 +52,8 @@ return [
     |
     */
 
-    'url' => env('APP_URL',null),
-    'asset_url' => env('ASSET_URL',null),
+    'url' => env('APP_URL','https://staging.optimalvirtualemployee.com.au/'),
+    'asset_url' => env('ASSET_URL','https://staging.optimalvirtualemployee.com.au/public'),
 
 
     /*
