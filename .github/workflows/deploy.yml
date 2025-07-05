@@ -1,4 +1,4 @@
-name: Deploy LP2 OVE App to Staging Server
+name: Deploy LP2 OVE App to Staging
 
 on:
   push:
