@@ -202,3 +202,10 @@ select:focus[data-flux-control] {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
+
+.hiringline{
+  background-image: url('/public/assets/siliconvalley/hireprocess.webp');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}

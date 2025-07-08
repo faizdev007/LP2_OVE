@@ -155,7 +155,7 @@
             </flux:modal.trigger>
         </div>
         <div class="flex-1 w-full flex items-center justify-center relative">
-            <div class="relative rounded-lg shadow-lg overflow-hidden bg-sv-primary p-8 items-center flex md:flex-row flex-col w-full md:w-auto p-4 gap-6">
+            <div class="relative rounded-lg overflow-hidden bg-sv-primary p-8 items-center flex w-full md:w-auto p-4 gap-6">
                 <div class="flex flex-1 items-center justify-center w-full">
                     <img loading="eager" decoding="async" src="{{ asset($logo_webp) }}" alt="Optimal Vertual Employee" class="aspect-square object-container"/>
                 </div>

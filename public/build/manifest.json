@@ -7,8 +7,12 @@
     "file": "assets/azblock-D9xq-coM.webp",
     "src": "public/assets/siliconvalley/azblock.webp"
   },
+  "public/assets/siliconvalley/hireprocess.webp": {
+    "file": "assets/hireprocess-DQan1VJf.webp",
+    "src": "public/assets/siliconvalley/hireprocess.webp"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-BAdVMPIl.css",
+    "file": "assets/app-BpLUzSuY.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },

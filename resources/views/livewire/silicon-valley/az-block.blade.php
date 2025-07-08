@@ -19,9 +19,18 @@
             </div>
 
             <!-- Tab Content -->
-            <div class="bg-sv-gradient-topbottom inset-shadow-sm inset-shadow-white/50 text-white p-1 rounded-xl md:aspect-[3/1] text-center text-gray-700">
-                <template x-cloak x-for="letter in letters" :key="letter" class="">
-                    <div class="md:grid h-full grid-cols-3" x-show="activeTab === letter" x-transition>
+            <div class="bg-sv-gradient-topbottom inset-shadow-sm inset-shadow-white/50 text-white p-1 rounded-xl md:aspect-[3/1] text-center text-gray-700 relative overflow-hidden">
+                <template x-for="letter in letters" :key="letter">
+                    <div 
+                        x-show="activeTab === letter"
+                        x-transition:enter="transition-opacity duration-500"
+                        x-transition:enter-start="opacity-0 scale-95"
+                        x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition-opacity duration-300"
+                        x-transition:leave-start="opacity-100 scale-100"
+                        x-transition:leave-end="opacity-0 scale-95"
+                        class="absolute inset-0 w-full h-full md:grid grid-cols-3"
+                    >
                         <h2 class="h-full md:text-[13rem] !h-[fit-content] text-[10rem] flex justify-center items-center font-bold" x-text="`${letter}`"></h2>
                         <div class="col-span-2 gap-2 custom-scroll items-center justify-center flex flex-wrap text-black overflow-y-auto h-full">
                             <span class="bg-white h-max w-max rounded-full px-4 p-2 inside-shadow text-nowrap">Artificial Intelligence</span>
