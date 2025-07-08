@@ -6,7 +6,7 @@ use Livewire\Component;
 
 class QueryBlock extends Component
 {
-    public $devs,$technologies=[];
+    public $devs,$technologies=[],$hirefor;
     public function submitForm()
     {
         dd($this);
