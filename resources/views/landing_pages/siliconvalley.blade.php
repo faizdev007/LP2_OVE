@@ -1,7 +1,7 @@
 <x-layouts.page.siliconvalley :header="$header" :seo="$seo??['metaTitle'=>'','metaDescription'=>'']" :title="__('Optimal Virtual Employee')">
-    <livewire:silicon-valley.hero-section/>
-    <livewire:silicon-valley.text-slider/>
-    <livewire:silicon-valley.dev-profile/>
+    <livewire:silicon-valley.hero-section :lp_data="$lp_data ?? []"/>
+    <livewire:silicon-valley.text-slider :lp_data="$lp_data ?? []"/>
+    <livewire:silicon-valley.dev-profile :lp_data="$lp_data ?? []"/>
     <livewire:silicon-valley.az-block :lp_data="$lp_data ?? []"/>
     <livewire:silicon-valley.ai-block :lp_data="$lp_data ?? []"/>
     <livewire:silicon-valley.query-block :lp_data="$lp_data ?? []"/>

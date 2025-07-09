@@ -52,8 +52,8 @@ Route::get('/lp2', function () {
 })->name('home');
 
 Route::get('/', function () {
-    return view('landing_pages.bacancy',[
-        'lp_theme'=>'bacancy',
+    return view('landing_pages.siliconvalley',[
+        'lp_theme'=>'siliconvalley',
         'lp_data' =>[],
         'header'=> [
             'btntext'=>'Book a 30 mins strategy call',

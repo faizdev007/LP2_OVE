@@ -21,13 +21,13 @@ class AdminController extends Controller
         // Validate the request to ensure 'lp_url' is present
         $request->validate([
             'page_name' => 'required|string|max:255',
-            'template' => 'required|in:bacancy',
+            'template' => 'required|in:bacancy,siliconvalley',
         ]);
-
+        
         $lp_url = Str::slug(strtolower($request->input('page_name')));
         $lp_theme = $request->input('template');
 
-        if(!LandingPage::where('lp_url', $lp_url)->count()){
+        if(!LandingPage::where(['lp_url'=>$lp_url])->count()){
             LandingPage::create([
                 'page_name' => request()->input('page_name'),
                 'lp_theme' => $lp_theme,

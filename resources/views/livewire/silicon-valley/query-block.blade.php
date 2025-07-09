@@ -41,10 +41,10 @@
                 <!-- Step 2 -->
                 <div
                     id="step2"
-                    x-transition:enter="transition translate-y-full ease-out duration-300"
+                    x-transition:enter="transition translate-y-full ease-out duration-800"
                     x-transition:enter-start="transform translate-y-full"
                     x-transition:enter-end="transform translate-y-0"
-                    x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave="transition ease-in duration-800"
                     x-transition:leave-start="transform translate-y-0"
                     x-transition:leave-end="transform translate-y-full"
                     class="absolute inset-shadow-sm inset-shadow-white transition translate-y-full z-20 w-full top-0 left-0 bg-sv-primary text-white md:px-20 px-10 py-5"
@@ -78,10 +78,10 @@
                 <!-- Step 3 -->
                 <div
                     id="step3"
-                    x-transition:enter="transition translate-y-full ease-out duration-300"
+                    x-transition:enter="transition translate-y-full ease-out duration-800"
                     x-transition:enter-start="transform translate-y-full"
                     x-transition:enter-end="transform translate-y-0"
-                    x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave="transition ease-in duration-800"
                     x-transition:leave-start="transform translate-y-0"
                     x-transition:leave-end="transform translate-y-full"
                     class="absolute inset-shadow-sm inset-shadow-white transition translate-y-full z-20 w-full top-0 left-0 bg-sv-primary text-white md:px-20 px-10 py-5"
