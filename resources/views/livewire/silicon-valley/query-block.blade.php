@@ -14,11 +14,11 @@
                     class="relative inset-shadow-sm inset-shadow-white z-10 w-full top-0 left-0 bg-sv-primary text-white md:px-20 px-10 py-5"
                     style="clip-path: polygon(95% 100%, 5% 100%, 0% 0%, 100% 0%)"
                 >
-                    <div class="py-10 flex flex-col items-center gap-6">
+                    <div class="py-20 flex flex-col items-center gap-6">
                         <p class="font-mono text-base sm:text-lg md:text-xl font-bold mb-4">
                             &lt;How many developers do you need? / &gt;
                         </p>
-                        <div class="space-y-3 text-start sm:space-y-4 pl-1 sm:pl-3">
+                        <div class="space-y-3 md:w-1/2 text-start sm:space-y-4 pl-1 sm:pl-3">
                             @php
                                 $devsOptions = [
                                     'one' => 'One',
@@ -47,26 +47,32 @@
                     x-transition:leave="transition ease-in duration-800"
                     x-transition:leave-start="transform translate-y-0"
                     x-transition:leave-end="transform translate-y-full"
-                    class="absolute inset-shadow-sm inset-shadow-white transition translate-y-full z-20 w-full top-0 left-0 bg-sv-primary text-white md:px-20 px-10 py-5"
+                    class="absolute h-full inset-shadow-sm inset-shadow-white transition translate-y-full z-20 w-full top-0 left-0 bg-sv-primary text-white md:px-20 px-10 py-5"
                     style="clip-path: polygon(95% 100%, 5% 100%, 0% 0%, 100% 0%)"
                 >
-                    <div class="py-10 flex flex-col items-center gap-6">
+                    <div class="py-20 flex flex-col items-center gap-6">
                         <p class="font-mono text-base sm:text-lg md:text-xl font-bold text-center">
                             &lt;Which technologies do you require? / &gt;
                         </p>
-                        <div class="space-y-3 text-start sm:space-y-4 pl-1 sm:pl-3">
+                        <div class="space-y-3 h-[200px] text-start flex flex-col overflow-y-auto md:grid grid-cols-4 gap-6 sm:space-y-4">
                             <!-- Repeat same labels -->
-                            <template x-for="(label, value) in {
-                                one: 'One',
-                                moreThenOne: 'More Than One',
-                                crossFunctionalTeam: 'I am looking for a cross-functional team',
-                                notSureYet: `I'm not sure yet`
-                            }" :key="value">
-                                <label class="flex items-center space-x-3">
-                                    <input type="checkbox" :value="value" wire:model="technologies" class="accent-white w-5 h-5" />
-                                    <span class="font-mono text-sm sm:text-base flex-1 text-gray-300" x-text="label"></span>
+                            @php
+                                $checkbox = [
+                                    'iAmNotSure'=> 'I am not sure',
+                                    'php'=> 'PHP',
+                                    'wordpress'=> 'Wordpress',
+                                    'laravel'=> 'Laravel',
+                                    'woocommerce'=> 'WooCommerce',
+                                    'python'=> 'Python',
+                                    'C#'=> 'C#'
+                                ];
+                            @endphp
+                            @foreach ($checkbox as $value => $label)
+                                <label class="flex items-center mb-0 justify-center space-x-3">
+                                    <input type="checkbox" value="{{$value}}" wire:model="technologies" class="accent-white w-5 h-5" />
+                                    <span class="font-mono text-sm sm:text-base flex-1 text-gray-300">{{$label}}</span>
                                 </label>
-                            </template>
+                            @endforeach
                         </div>
                         <div class="flex gap-4 justify-center pb-4 mt-6">
                             <x-silicon-valley.action-button onclick="previouse('step2')" :title="'Previous'" class="!bg-sv-primary hover:!bg-sv-secondary/30 border border-white"/>
@@ -87,17 +93,17 @@
                     class="absolute inset-shadow-sm inset-shadow-white transition translate-y-full z-20 w-full top-0 left-0 bg-sv-primary text-white md:px-20 px-10 py-5"
                     style="clip-path: polygon(95% 100%, 5% 100%, 0% 0%, 100% 0%)"
                 >
-                    <div class="py-10 flex flex-col items-center gap-6">
+                    <div class="py-20 flex flex-col items-center gap-6">
                         <p class="font-mono text-base sm:text-lg md:text-xl font-bold text-center">
                             &lt;When do you wish to hire? / &gt;
                         </p>
-                        <div class="space-y-3 text-start sm:space-y-4 pl-1 sm:pl-3">
+                        <div class="space-y-3 md:w-1/2 text-start sm:space-y-4 pl-1 sm:pl-3">
                             @php
                                 $devsOptions = [
-                                    'one' => 'One',
-                                    'moreThenOne' => 'More Than One',
-                                    'crossFunctionalTeam' => 'I am looking for a cross-functional team',
-                                    'notSureYet' => "I'm not sure yet"
+                                    'today' => 'Today',
+                                    'inOneWeek' => 'In a week',
+                                    'inMonth' => 'In a month',
+                                    'later' => "later"
                                 ];
                             @endphp
                             @foreach ($devsOptions as $value => $label)
@@ -109,7 +115,9 @@
                         </div>
                         <div class="flex gap-4 justify-center mt-6">
                             <x-silicon-valley.action-button onclick="previouse('step3')" :title="'Previous'"  class="!bg-sv-primary hover:!bg-sv-secondary/30 border border-white"/>
-                            <x-silicon-valley.action-button type="submit" :title="'Submit'" class="hover:bg-sv-secondary/50"/>
+                            <flux:modal.trigger name="book-a-call">
+                                <x-silicon-valley.action-button :title="'Submit'" class="hover:bg-sv-secondary/50"/>
+                            </flux:modal.trigger>
                         </div>
                     </div>
                 </div>
