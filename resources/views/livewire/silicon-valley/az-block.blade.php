@@ -19,7 +19,7 @@
             </div>
 
             <!-- Tab Content -->
-            <div class="bg-sv-gradient-topbottom inset-shadow-sm inset-shadow-white/50 text-white p-1 rounded-xl md:aspect-[3/1] text-center text-gray-700 relative overflow-hidden">
+            <div class="bg-sv-gradient-topbottom inset-shadow-sm inset-shadow-white/50 text-white p-1 rounded-xl md:aspect-[3/1] aspect-[1/1] text-center text-gray-700 relative overflow-hidden">
                 <template x-for="letter in letters" :key="letter">
                     <div 
                         x-show="activeTab === letter"
