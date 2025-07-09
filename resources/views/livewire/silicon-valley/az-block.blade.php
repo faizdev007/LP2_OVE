@@ -19,27 +19,29 @@
             </div>
 
             <!-- Tab Content -->
-            <div class="bg-sv-gradient-topbottom inset-shadow-sm inset-shadow-white/50 text-white p-1 rounded-xl md:aspect-[3/1] aspect-[1/1] text-center text-gray-700 relative overflow-hidden">
-                <template x-for="letter in letters" :key="letter">
-                    <div 
-                        x-show="activeTab === letter"
-                        x-transition:enter="transition-opacity duration-500"
-                        x-transition:enter-start="opacity-0 scale-95"
-                        x-transition:enter-end="opacity-100 scale-100"
-                        x-transition:leave="transition-opacity duration-300"
-                        x-transition:leave-start="opacity-100 scale-100"
-                        x-transition:leave-end="opacity-0 scale-95"
-                        class="absolute inset-0 w-full h-full md:grid grid-cols-3"
-                    >
-                        <h2 class="h-full md:text-[13rem] !h-[fit-content] text-[10rem] flex justify-center items-center font-bold" x-text="`${letter}`"></h2>
-                        <div class="col-span-2 gap-2 custom-scroll items-center justify-center flex flex-wrap text-black overflow-y-auto h-full">
-                            <span class="bg-white h-max w-max rounded-full px-4 p-2 inside-shadow text-nowrap">Artificial Intelligence</span>
-                            <span class="bg-white h-max w-max rounded-full px-4 p-2 inside-shadow">ASP .NET</span>
-                            <span class="bg-white h-max w-max rounded-full px-4 p-2 inside-shadow">Auto CAD</span>
-                            <span class="bg-white h-max w-max rounded-full px-4 p-2 inside-shadow">API Testing</span>
+            <div class="bg-sv-gradient-topbottom inset-shadow-sm inset-shadow-white/50 text-white p-1 rounded-xl text-center text-gray-700">
+                <div class="relative md:aspect-[2.5/1] aspect-[1/2] md:flex items-center overflow-hidden">
+                    <template x-for="letter in letters" :key="letter">
+                        <div 
+                            x-show="activeTab === letter"
+                            x-transition:enter="transition-opacity duration-500"
+                            x-transition:enter-start="opacity-0 scale-95"
+                            x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:leave="transition-opacity duration-300"
+                            x-transition:leave-start="opacity-100 scale-100"
+                            x-transition:leave-end="opacity-0 scale-95"
+                            class="absolute md:flex items-center inset-0 w-full h-full gap-4 justify-center md:px-6"
+                        >
+                            <h2 class="h-full md:text-[13rem] !h-[fit-content] text-[10rem] flex justify-center items-center font-bold" x-text="`${letter}`"></h2>
+                            <div class="col-span-2 gap-2 custom-scroll items-center justify-center flex md:flex-wrap md:flex-row flex-col text-black overflow-y-auto">
+                                <span class="bg-white h-max w-max rounded-full px-4 p-2 inside-shadow text-nowrap">Artificial Intelligence</span>
+                                <span class="bg-white h-max w-max rounded-full px-4 p-2 inside-shadow">ASP .NET</span>
+                                <span class="bg-white h-max w-max rounded-full px-4 p-2 inside-shadow">Auto CAD</span>
+                                <span class="bg-white h-max w-max rounded-full px-4 p-2 inside-shadow">API Testing</span>
+                            </div>
                         </div>
-                    </div>
-                </template>
+                    </template>
+                </div>
             </div>
         </div>
     </div>
