@@ -108,9 +108,9 @@
                 </form>
             </div>
         </div>
-        <div class="h-40"></div>
+        <div class="h-40 hidden"></div>
     </div>
-    <div class="relative md:h-48 h-32 flex justify-center items-center">
+    <div class="relative hidden md:h-48 h-32 flex justify-center items-center">
         <div class="absolute bottom-4 md:border rounded boder-black shadow flex flex-col md:gap-8 gap-3 w-full md:max-w-5xl 2xl:max-w-7xl mx-auto bg-white !text-black text-center md:p-10 p-4 shadow-lg md:mt-8">
             <div class="grid gap-2">
                 <flux:heading class="text-center">

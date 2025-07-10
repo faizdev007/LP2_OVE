@@ -1,4 +1,4 @@
-<div class="border-b border-white text-white bg-sv-secondary pt-10">
+<div class="border-b border-white text-white bg-sv-gradient-bottomtop pt-10">
     <div class="p-2 py-6 pb-0 max-w-5xl mx-auto text-center">
         <h2 class="text-center text-white md:text-3xl text-2xl font-bold mb-10">
             <code><</code>Heading Goes Here <code>/ ></code>

@@ -53,6 +53,7 @@
   --sv-gradient: linear-gradient(90deg, rgba(0, 0, 70, 1) 40%, rgba(28, 181, 224, 1) 100%);
   --sv-gradient-topbutton: linear-gradient(180deg, rgba(0, 0, 70, 1) 20%, rgba(28, 181, 224, 1) 100%);
   --sv-gradient-buttontop: linear-gradient(0deg, rgba(0, 0, 70, 1) 20%, rgba(28, 181, 224, 1) 100%);
+  --sv-gradient-reverse: linear-gradient(270deg,rgba(0, 0, 70, 1) 40%, rgba(28, 181, 224, 1) 100%);
 }
 
 
@@ -66,6 +67,10 @@
 
   .bg-sv-gradient-bottomtop{
     background-image: var(--sv-gradient-buttontop);
+  }
+
+  .bg-sv-gradient-reverse {
+    background-image: var(--sv-gradient-reverse);
   }
 }
 
@@ -209,3 +214,34 @@ select:focus[data-flux-control] {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.herobg{
+  background-image: url('/public/assets/siliconvalley/herobg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+html,body {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(0);
+    animation: ripple-animation 600ms ease-out forwards;
+    pointer-events: none;
+    z-index: 9999;
+    overflow-x: hidden;
+  }
+
+  @keyframes ripple-animation {
+    to {
+      transform: scale(10);
+      opacity: 0;
+    }
+  }

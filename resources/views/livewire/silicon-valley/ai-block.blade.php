@@ -1,4 +1,4 @@
-<div class="py-12 border-b border-white scroll-mt-20 bg-sv-primary" section="AI-ET">
+<div class="py-12 border-b border-white scroll-mt-20 bg-sv-gradient-reverse" section="AI-ET">
     {{-- Nothing in the world is as soft and yielding as water. --}}
     @if(Route::currentRouteName() === 'create_lp_content' || Route::currentRouteName() === 'livewire.update' && auth()->check())
         <div class="py-4">

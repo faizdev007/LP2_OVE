@@ -103,6 +103,28 @@
                 window.addEventListener('resize', updateText);
             })();
         </script>
+        <script>
+            document.addEventListener("click", function (e) {
+                const ripple = document.createElement("div");
+                ripple.classList.add("ripple");
+
+                const size = 150;
+                ripple.style.width = ripple.style.height = `${size}px`;
+
+                ripple.style.left = `${e.pageX - size / 2}px`;
+                ripple.style.top = `${e.pageY - size / 2}px`;
+
+                document.body.appendChild(ripple);
+
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => {
+            document.body.style.overflow = '';
+            }, 600);
+        </script>
         @fluxScripts
     </body>
     <!-- Google Tag Manager (noscript) -->

@@ -1,7 +1,10 @@
-<div class="py-12 border-b border-white scroll-mt-20 bg-sv-primary">
+<div class="pt-12 border-b border-white scroll-mt-20 bg-sv-gradient">
     {{-- In work, do what you enjoy. --}}
     <div class="relative flex md:flex-row flex-col items-center justify-center gap-4 md:space-y-0 space-y-48 md:py-10 px-4 py-2 sm:px-6 lg:px-8 overflow-hidden mx-auto h-full">
-        <div class="lg:w-none m-4 md:w-[40%]">
+        <div class="lg:w-none m-4 md:w-[40%] pb-12">
+            <div class="aspect-[1/1] h-full absolute">
+                <img src="{{asset('assets/siliconvalley/globe-bg.webp')}}" class="z-0 animate-[spin_4s_linear_infinite] opacity-30 h-full" alt="Silicon Valley Logo"/>
+            </div>
             <div class="relative rounded-full lg:w-max">
                 <div class="absolute  -top-3 bottom-4 z-0 -end-3 start-4  border-2 border-white rounded-full"></div>
                 <div class="absolute inset-0 top-4 -bottom-3 z-0 end-4 -start-3  border-2 border-white rounded-full"></div>
@@ -9,7 +12,7 @@
                 <img src="{{asset('assets/siliconvalley/devprofile/devprofile.webp')}}" alt="devprofile" class="rounded-full aspect-square relative z-10"/>
             </div>
         </div>
-        <div class="text-white md:w-[60%] w-full flex gap-6 flex-col space-y-4">
+        <div class="text-white md:w-[60%] w-full flex gap-6 flex-col space-y-4 relative">
             <span class="text-lg md:text-start text-center">Say Hello To</span>
             <div class="flex md:flex-row flex-col gap-6 items-center justify-between">
                 <h2 class="2xl:text-6xl text-3xl font-bold">Isabella</h2>

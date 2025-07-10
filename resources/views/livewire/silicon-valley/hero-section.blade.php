@@ -1,33 +1,27 @@
-<div class="py-8 border-b border-white bg-sv-gradient text-white">
+<div class="border-b border-white bg-sv-gradient text-white">
     {{-- If your happiness depends on money, you will never be happy with yourself. --}}
     @if(Route::currentRouteName() === 'create_lp_content' || Route::currentRouteName() === 'livewire.update' && auth()->check())
     <fieldset class="container relative text-white max-w-6xl p-4 rounded mx-auto border-2 border-white">
         <x-messagestatus :successMessage="$successMessage" :errorMessage="$errorMessage"></x-messagestatus>
         <legend class="text-xl font-bold text-white  markque px-2">Hero Section</legend>
-        <p class="">Customize the hero section of your SiliconValley landing page.</p>
+        <p>Customize the hero section of your SiliconValley landing page.</p>
         <form wire:submit.prevent="save" class="mt-2 flex-1 overflow-hidden max-w-7xl mx-auto dark:border-neutral-700">
             <div class="flex flex-col gap-2 mb-4">
                 <label for="hero_subtitle" class="text-sm font-medium">Hero SubTitle</label>
-                <div
-                    id="hero_subtitle"
-                    contenteditable="true"
-                    class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bacancy-primary"
-                    wire:ignore
-                    x-data
-                    x-on:input="$wire.set('hero_subtitle', $el.innerText.trim())"
-                    placeholder="Enter hero title"
-                >{{ $hero_subtitle }}</div>
+                <x-simple-text-editor id="hero_subtitle" name="hero_subtitle" content="{{ $hero_subtitle }}" />
+                
             </div>
 
             <div class="flex flex-col gap-2 mb-4">
                 <label for="hero_title" class="text-sm font-medium">Hero Title</label>
+                <!-- <x-simple-text-editor id="hero_title" name="hero_title" content="{{ $hero_title }}" /> -->
                 <div
                     id="hero_title"
                     contenteditable="true"
                     class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bacancy-primary"
                     wire:ignore
                     x-data
-                    x-on:input="$wire.set('hero_title', $el.innerText.trim())"
+                    x-on:input="$wire.set('hero_title', $el.innerHTML.trim())"
                     placeholder="Enter hero title"
                 >{{ $hero_title }}</div>
             </div>
@@ -122,17 +116,19 @@
         </form>
     </fieldset>   
     @else
-    <div class="md:h-dvh">
+    <div class="md:h-dvh herobg">
         <div class="relative md:flex grid flex-1 gap-4 md:space-y-0 space-y-48 py-10 px-4 py-2 sm:px-6 lg:px-8 overflow-hidden mx-auto h-full">
-            <div class="md:w-[60%] flex flex-col justify-around md:items-start items-center h-full">
-                <div class="flex flex-col md:text-left text-center gap-8">
-                    <p class="md:text-xl 2xl:text-3xl text-xl">{{$hero_subtitle}}</p>
-                    <h1 class="md:text-4xl lg:text-[50px] 2xl:text-[70px] text-3xl font-extrabold vast-shadow-bold">{{$hero_title}}</h1>
-                    <div class="md:text-xl lg:text-[30px] 2xl:text-[40px] text-xl font-extrabold vast-shadow-bold"><code><</code>{{$hero_shorttext}} <code>/ ></code></div>
+            <div class="md:w-[60%] flex flex-col justify-around md:items-start items-center h-full relative">
+                <div class="relative z-20 flex flex-col gap-4 md:gap-8 items-center justify-around md:items-start h-full md:items-start">
+                    <div class="flex flex-col md:text-left text-center gap-8">
+                        <p class="md:text-xl 2xl:text-3xl text-xl">{!!$hero_subtitle!!}</p>
+                        <h1 class="md:text-4xl lg:text-[50px] 2xl:text-[70px] text-3xl font-extrabold vast-shadow-bold">{!!$hero_title!!}</h1>
+                        <div class="md:text-xl lg:text-[30px] 2xl:text-[40px] text-xl font-extrabold vast-shadow-bold"><code><</code>{{$hero_shorttext}} <code>/ ></code></div>
+                    </div>
+                    <flux:modal.trigger name="book-a-call">
+                        <x-silicon-valley.action-button class="" x-data="" x-on:click.prevent="$dispatch('open-modal', 'book-a-call')" title="{{ 'Hire a Developer' }}" class="hover:bg-sv-secondary/50 text-lg md:text-xl md:text-2xl lg:text-3xl" />
+                    </flux:modal.trigger>
                 </div>
-                <flux:modal.trigger name="book-a-call">
-                    <x-silicon-valley.action-button class="" x-data="" x-on:click.prevent="$dispatch('open-modal', 'book-a-call')" title="{{ 'Hire a Developer' }}" class="hover:bg-sv-secondary/50 text-lg md:text-xl md:text-2xl lg:text-3xl" />
-                </flux:modal.trigger>
             </div>
             <div class="md:w-[40%] w-full flex justify-center items-center relative">
                 <div class="aspect-[1.3/2] rounded-xl p-1 lg:h-3/4 md:h-2/3 w-1/2 md:w-auto border-2 border-white relative">

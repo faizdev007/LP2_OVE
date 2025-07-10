@@ -46,12 +46,13 @@ class HeroSection extends Component
 
     public function save()
     {
+        // dd($this);
         try {
             //code...
             $this->validate([
                 'hero_shorttext' => 'required|max:255',
                 'hero_title' => 'required',
-                'hero_subtitle' => 'nullable|max:100',
+                'hero_subtitle' => 'nullable|max:255',
                 'buttonText' => 'nullable|max:50',
             ]);
 
