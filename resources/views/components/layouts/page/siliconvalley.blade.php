@@ -20,7 +20,7 @@
     <head>
         @include('partials.head')
     </head>
-    <body class="min-h-screen bg-white fira-code relative -z-10">
+    <body class="min-h-screen bg-white fira-code -z-10 relative overflow-x-hidden">
         <flux:header sticky class="border-b bg-sv-primary border-gray-500 p-2">
             <div class="relative flex-1 gap-2 overflow-hidden mx-auto flex">
                 <a href="{{ url()->current() }}" class="flex md:pe-8 items-center space-x-2 rtl:space-x-reverse lg:ms-0" wire:navigate>

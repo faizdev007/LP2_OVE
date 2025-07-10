@@ -222,12 +222,6 @@ select:focus[data-flux-control] {
   background-repeat: no-repeat;
 }
 
-html,body {
-  width: 100%;
-  overflow-x: hidden;
-  position: relative;
-}
-
 .ripple {
     position: absolute;
     border-radius: 50%;
