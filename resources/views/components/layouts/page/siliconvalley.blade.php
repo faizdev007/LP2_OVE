@@ -103,6 +103,7 @@
                 window.addEventListener('resize', updateText);
             })();
         </script>
+        @if(!auth()->check())
         <script>
             document.addEventListener("click", function (e) {
                 const ripple = document.createElement("div");
@@ -125,6 +126,7 @@
             document.body.style.overflow = '';
             }, 600);
         </script>
+        @endif
         @fluxScripts
     </body>
     <!-- Google Tag Manager (noscript) -->

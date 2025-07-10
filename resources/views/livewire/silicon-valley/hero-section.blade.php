@@ -8,31 +8,17 @@
         <form wire:submit.prevent="save" class="mt-2 flex-1 overflow-hidden max-w-7xl mx-auto dark:border-neutral-700">
             <div class="flex flex-col gap-2 mb-4">
                 <label for="hero_subtitle" class="text-sm font-medium">Hero SubTitle</label>
-                <x-simple-text-editor id="hero_subtitle" name="hero_subtitle" content="{{ $hero_subtitle }}" />
-                
+                <x-simple-text-editor id="hero_subtitle" name="hero_subtitle" content="{!! $hero_subtitle !!}" />
             </div>
 
             <div class="flex flex-col gap-2 mb-4">
                 <label for="hero_title" class="text-sm font-medium">Hero Title</label>
-                <!-- <x-simple-text-editor id="hero_title" name="hero_title" content="{{ $hero_title }}" /> -->
-                <div
-                    id="hero_title"
-                    contenteditable="true"
-                    class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bacancy-primary"
-                    wire:ignore
-                    x-data
-                    x-on:input="$wire.set('hero_title', $el.innerHTML.trim())"
-                    placeholder="Enter hero title"
-                >{{ $hero_title }}</div>
+                <x-simple-text-editor id="hero_title" name="hero_title" content="{!! $hero_title !!}" />
             </div>
 
             <div class="flex flex-col gap-2 mb-4">
                 <label for="hero_shorttext" class="text-sm font-medium">Hero SortText</label>
-                <input type="text"
-                    class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bacancy-primary"
-                    placeholder="Enter hero subtitle"
-                    wire:model="hero_shorttext"
-                ></input>
+                <x-simple-text-editor id="hero_shorttext" name="hero_shorttext" content="{!! $hero_shorttext !!}" />
             </div>
     
             <div class="flex flex-col gap-2 mb-4">
@@ -123,7 +109,7 @@
                     <div class="flex flex-col md:text-left text-center gap-8">
                         <p class="md:text-xl 2xl:text-3xl text-xl">{!!$hero_subtitle!!}</p>
                         <h1 class="md:text-4xl lg:text-[50px] 2xl:text-[70px] text-3xl font-extrabold vast-shadow-bold">{!!$hero_title!!}</h1>
-                        <div class="md:text-xl lg:text-[30px] 2xl:text-[40px] text-xl font-extrabold vast-shadow-bold"><code><</code>{{$hero_shorttext}} <code>/ ></code></div>
+                        <div class="md:text-xl lg:text-[30px] 2xl:text-[40px] text-xl font-extrabold vast-shadow-bold">{!!$hero_shorttext!!}</div>
                     </div>
                     <flux:modal.trigger name="book-a-call">
                         <x-silicon-valley.action-button class="" x-data="" x-on:click.prevent="$dispatch('open-modal', 'book-a-call')" title="{{ 'Hire a Developer' }}" class="hover:bg-sv-secondary/50 text-lg md:text-xl md:text-2xl lg:text-3xl" />

@@ -24,7 +24,7 @@ class HeroSection extends Component
         $hero = $jsonData['hero'] ?? [];
         $this->hero_subtitle = $hero['hero_subtitle'] ?? 'Harness the power of cutting-edge technologies with';
         $this->hero_title = $hero['hero_title'] ?? 'Silicon Valley';
-        $this->hero_shorttext = $hero['hero_shorttext'] ?? 'Converted Developers';
+        $this->hero_shorttext = $hero['hero_shorttext'] ?? '< Converted Developers />';
         $this->buttonText = $hero['buttonText'] ?? 'Hire a Developer';
         $this->heroPortfolio =$hero['heroPortfolio'] ?? ['image' => 'assets/siliconvalley/herosection/heroimage.webp', 'name'=>'JennyDoe', 'title' => 'Sr. AI Engineer'];
         $this->floatingIcons = $hero['floatingIcons'] ?? ['assets/siliconvalley/herosection/nodejs.webp','assets/siliconvalley/herosection/python.webp','assets/siliconvalley/herosection/firebase.webp','assets/siliconvalley/herosection/react.webp'];

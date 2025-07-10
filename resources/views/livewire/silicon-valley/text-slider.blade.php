@@ -1,29 +1,7 @@
 <div class="py-10 border-b border-white overflow-hidden bg-sv-gradient-topbottom text-white">
     {{-- Close your eyes. Count to one. That is how long forever feels. --}}
     @if(Route::currentRouteName() === 'create_lp_content' || Route::currentRouteName() === 'livewire.update' && auth()->check())
-            <div class="w-full max-w-2xl bg-white text-black rounded-lg shadow p-4">
-                <div class="flex gap-2 mb-4">
-                <button onclick="execCmd('bold')" class="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600">Bold</button>
-                <button onclick="execCmd('italic')" class="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600">Italic</button>
-                <button onclick="execCmd('underline')" class="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600">Underline</button>
-                <button onclick="clearEditor()" class="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600">Clear</button>
-                </div>
-
-                <div id="editor" contenteditable="true"
-                    class="min-h-[200px] p-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-300">
-                Type something here...
-                </div>
-            </div>
-
-            <script>
-                function execCmd(command) {
-                document.execCommand(command, false, null);
-                }
-
-                function clearEditor() {
-                document.getElementById('editor').innerHTML = '';
-                }
-            </script>
+        
     @else
     <div class="md:min-h-dvh">
         <div class="relative gap-4 overflow-hidden mx-auto h-full">

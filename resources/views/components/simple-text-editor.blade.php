@@ -10,13 +10,13 @@
     <button type="button" onclick="clearEditor()" class="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600">Clear</button>
     </div>
 
-    <p id="editor" contenteditable="true"
+    <div id="editor" contenteditable="true"
         wire:ignore
         x-data
         x-on:input="$wire.set('{{ $name }}', $el.innerHTML.trim())"
         class="min-h-[200px] relative p-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-300">
-        {!!trim($content, '<br>')!!}
-    </p>
+        {!!$content!!}
+    </div>
 </div>
 
 <script>
