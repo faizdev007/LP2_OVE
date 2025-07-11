@@ -29,6 +29,8 @@ class TextSlider extends Component
                 'paragraph' => 'required',
             ]);
 
+            $contentdata = isset($this->lp_data['page_contect']) ? json_decode($this->lp_data['page_contect'],true) : [];
+
             $contentdata['textslide'] = [
                 'sliding_text' => $this->sliding_text,
                 'paragraph' => $this->paragraph,
@@ -36,14 +38,11 @@ class TextSlider extends Component
 
             LandingPagePatch::update($this->lp_data,$contentdata);
             
-            $this->successMessage = 'Hero section updated successfully!';
+            $this->successMessage = 'Section updated successfully!';
         } catch (\Throwable $th) {
             //throw $th;
             $this->errorMessage = $th->getMessage();
         }
-        // Here you can save the data to the database or perform any other action
-        // For example, you can dispatch an event or call a service
-        session()->flash('message', 'Hero section updated successfully!');
     }
 
     public function render()

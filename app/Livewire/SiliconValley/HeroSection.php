@@ -2,6 +2,7 @@
 
 namespace App\Livewire\SiliconValley;
 
+use App\Facades\HelperFacade;
 use App\Facades\LandingPagePatch;
 use Livewire\Component;
 use Livewire\Features\SupportFileUploads\WithFileUploads;
@@ -56,6 +57,24 @@ class HeroSection extends Component
                 'buttonText' => 'nullable|max:50',
             ]);
 
+            foreach ($this->removeImg as $key => $value) {
+                if (is_string($value)) {
+                    HelperFacade::deleteFile($value);
+                }
+            }
+
+            if (isObject($this->heroPortfolio['image'])) {
+                $this->heroPortfolio['image'] = HelperFacade::uploadFile($this->heroPortfolio['image'], 'siliconvalley/developer/photos');
+            }
+            
+            foreach ($this->floatingIcons as $key => $single) {
+                if (isObject($single)) {
+                    $this->floatingIcons[$key] = HelperFacade::uploadFile($single, 'siliconvalley/floatingIcons/photos');
+                }
+            }
+            
+            $contentdata = isset($this->lp_data['page_contect']) ? json_decode($this->lp_data['page_contect'],true) : [];
+
             $contentdata['hero'] = [
                 'hero_shorttext' => $this->hero_shorttext,
                 'hero_title' => $this->hero_title,
@@ -67,14 +86,11 @@ class HeroSection extends Component
 
             LandingPagePatch::update($this->lp_data,$contentdata);
             
-            $this->successMessage = 'Hero section updated successfully!';
+            $this->successMessage = 'Section updated successfully!';
         } catch (\Throwable $th) {
             //throw $th;
             $this->errorMessage = $th->getMessage();
         }
-        // Here you can save the data to the database or perform any other action
-        // For example, you can dispatch an event or call a service
-        session()->flash('message', 'Hero section updated successfully!');
     }
 
     public function render()

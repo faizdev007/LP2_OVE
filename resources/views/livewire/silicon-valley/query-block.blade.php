@@ -1,13 +1,12 @@
-<div class="border-b border-white text-white bg-sv-gradient-bottomtop pt-10">
-    <div class="p-2 py-6 pb-0 max-w-5xl mx-auto text-center">
+<div class="border-b border-white text-white bg-sv-gradient-bottomtop pt-10 relative">
+    <div class="pt-6 h-full relative max-w-5xl mx-auto text-center">
         <h2 class="text-center text-white md:text-3xl text-2xl font-bold mb-10">
             <code><</code>Heading Goes Here <code>/ ></code>
         </h2>
         <p class="mb-6">Lorem ipsum dolor amet consectetur adipiscing elitsed eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-        <div class="w-full max-w-5xl mx-auto">
+        <div class="w-full px-3 bottom-0 mx-auto">
             <form wire:submit.prevent="submitForm" class="relative overflow-hidden">
-                
                 <!-- Step 1 -->
                 <div
                     id="step1"
@@ -57,19 +56,16 @@
                         <div class="space-y-3 h-[200px] text-start flex flex-col overflow-y-auto md:grid grid-cols-4 gap-6 sm:space-y-4">
                             <!-- Repeat same labels -->
                             @php
-                                $checkbox = [
-                                    'iAmNotSure'=> 'I am not sure',
-                                    'php'=> 'PHP',
-                                    'wordpress'=> 'Wordpress',
-                                    'laravel'=> 'Laravel',
-                                    'woocommerce'=> 'WooCommerce',
-                                    'python'=> 'Python',
-                                    'C#'=> 'C#'
+                                $devsOptions = [
+                                    'today' => 'Today',
+                                    'inOneWeek' => 'In a week',
+                                    'inMonth' => 'In a month',
+                                    'later' => "later"
                                 ];
                             @endphp
-                            @foreach ($checkbox as $value => $label)
-                                <label class="flex items-center mb-0 justify-center space-x-3">
-                                    <input type="checkbox" value="{{$value}}" wire:model="technologies" class="accent-white w-5 h-5" />
+                            @foreach ($devsOptions as $value => $label)
+                                <label class="flex items-center mb-0 space-x-3">
+                                    <input type="radio" value="{{$value}}" wire:model="hirefor" class="accent-white w-5 h-5" />
                                     <span class="font-mono text-sm sm:text-base flex-1 text-gray-300">{{$label}}</span>
                                 </label>
                             @endforeach

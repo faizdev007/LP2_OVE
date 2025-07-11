@@ -31,7 +31,7 @@
             </div>
             <fieldset class="container relative text-white max-w-6xl p-4 rounded mx-auto border-2 border-white">
                 <legend class="text-xl font-bold text-white  markque px-2">Hero Profile Section</legend>
-                <div class="flex gap-4">
+                <div class="md:flex gap-4">
                     <div class="flex aspect-[1.3/2] h-68 flex-col gap-2 mb-4">
                         <label class="text-sm font-medium">Hero Profile Image
                             @if (isset($heroPortfolio['image']) && is_object($heroPortfolio['image']))

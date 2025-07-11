@@ -2,7 +2,7 @@
     'name' => '',
     'content' => 'Type something here...'
 ])
-<div class="w-full border rounded-lg shadow p-4">
+<div class="max-w-full border rounded-lg shadow p-4">
     <div class="flex gap-2 mb-4">
     <button type="button" onclick="execCmd('bold')" class="px-3 py-1 bg-gray-600 text-white rounded hover:bg-gray-700">Bold</button>
     <button type="button" onclick="execCmd('italic')" class="px-3 py-1 bg-gray-600 text-white rounded hover:bg-gray-700">Italic</button>
@@ -14,7 +14,7 @@
         wire:ignore
         x-data
         x-on:input="$wire.set('{{ $name }}', $el.innerHTML.trim())"
-        class="min-h-[200px] relative p-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-300">
+        class="min-h-[100px] relative p-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-300">
         {!!$content!!}
     </div>
 </div>
