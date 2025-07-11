@@ -15,7 +15,7 @@
                 >
                     <div class="py-20 flex flex-col items-center gap-6">
                         <p class="font-mono text-base sm:text-lg md:text-xl font-bold mb-4">
-                            &lt;How many developers do you need? / &gt;
+                            &lt; How many developers do you need? / &gt;
                         </p>
                         <div class="space-y-3 md:w-1/2 text-start sm:space-y-4 pl-1 sm:pl-3">
                             @php
@@ -51,9 +51,9 @@
                 >
                     <div class="py-20 flex flex-col items-center gap-6">
                         <p class="font-mono text-base sm:text-lg md:text-xl font-bold text-center">
-                            &lt;Which technologies do you require? / &gt;
+                            &lt; Which technologies do you require? / &gt;
                         </p>
-                        <div class="space-y-3 h-[200px] text-start flex flex-col overflow-y-auto md:grid grid-cols-4 gap-6 sm:space-y-4">
+                        <div class="space-y-3 md:w-1/2 text-start sm:space-y-4 pl-1 sm:pl-3">
                             <!-- Repeat same labels -->
                             @php
                                 $devsOptions = [
@@ -64,7 +64,7 @@
                                 ];
                             @endphp
                             @foreach ($devsOptions as $value => $label)
-                                <label class="flex items-center mb-0 space-x-3">
+                                <label class="flex items-center space-x-3">
                                     <input type="radio" value="{{$value}}" wire:model="hirefor" class="accent-white w-5 h-5" />
                                     <span class="font-mono text-sm sm:text-base flex-1 text-gray-300">{{$label}}</span>
                                 </label>
@@ -89,31 +89,46 @@
                     class="absolute inset-shadow-sm inset-shadow-white transition translate-y-full z-20 w-full top-0 left-0 bg-sv-primary text-white md:px-20 px-10 py-5"
                     style="clip-path: polygon(95% 100%, 5% 100%, 0% 0%, 100% 0%)"
                 >
-                    <div class="py-20 flex flex-col items-center gap-6">
+                    <div class="py-20 flex flex-col items-center gap-6 pb-4">
                         <p class="font-mono text-base sm:text-lg md:text-xl font-bold text-center">
-                            &lt;When do you wish to hire? / &gt;
+                            &lt; Tell Us more about your Project? / &gt;
                         </p>
-                        <div class="space-y-3 md:w-1/2 text-start sm:space-y-4 pl-1 sm:pl-3">
-                            @php
-                                $devsOptions = [
-                                    'today' => 'Today',
-                                    'inOneWeek' => 'In a week',
-                                    'inMonth' => 'In a month',
-                                    'later' => "later"
-                                ];
-                            @endphp
-                            @foreach ($devsOptions as $value => $label)
-                                <label class="flex items-center space-x-3">
-                                    <input type="radio" value="{{$value}}" wire:model="hirefor" class="accent-white w-5 h-5" />
-                                    <span class="font-mono text-sm sm:text-base flex-1 text-gray-300">{{$label}}</span>
-                                </label>
-                            @endforeach
-                        </div>
-                        <div class="flex gap-4 justify-center mt-6">
-                            <x-silicon-valley.action-button onclick="previouse('step3')" :title="'Previous'"  class="!bg-sv-primary hover:!bg-sv-secondary/30 border border-white"/>
-                            <flux:modal.trigger name="book-a-call">
-                                <x-silicon-valley.action-button :title="'Submit'" class="hover:bg-sv-secondary/50"/>
-                            </flux:modal.trigger>
+                        <div class="">
+                            <div class="my-4">
+                                <label for="name" class="block text-sm font-medium mb-1 hidden">Full Name</label>
+                                <input type="text" autocomplete="true" id="name" wire:model.defer="name" class="w-full border-0 border-b border-white bg-transparent px-3 py-2 text-white placeholder-white focus:outline-none focus:ring-0 focus:border-white" placeholder="Full Name"/>
+                                @error('name') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
+                            </div>
+    
+                            
+                            <div class="md:flex gap-4">
+                                <div class="my-4">
+                                    <label for="email" class="block text-sm font-medium mb-1 hidden">Email</label>
+                                    <input type="email" autocomplete="true" id="email" placeholder="Email" wire:model.defer="email" class="w-full border-0 border-b border-white bg-transparent px-3 py-2 text-white placeholder-white focus:outline-none focus:ring-0 focus:border-white"/>
+                                    @error('email') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
+                                </div>
+                                <div class="my-4">
+                                    <label for="phone" class="block text-sm font-medium mb-1 hidden">phone</label>
+                                    <input type="phone" autocomplete="true" id="phone" placeholder="Phone" wire:model.defer="phone"
+                                    inputmode="numeric" 
+                                    pattern="\d*" 
+                                    required
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '')" 
+                                    maxlength="14"
+                                    class="w-full border-0 border-b border-white bg-transparent px-3 py-2 text-white placeholder-white focus:outline-none focus:ring-0 focus:border-white"/>
+                                    @error('phone') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
+                                </div>
+                            </div>
+    
+                            <div class="my-4">
+                                <label for="project_brief" class="block text-sm font-medium mb-1 hidden">Project Brief</label>
+                                <textarea type="text" rows="2" id="project_brief" placeholder="Project Brief" wire:model.defer="project_brief" class="w-full border-0 border-b border-white bg-transparent px-3 py-2 text-white placeholder-white focus:outline-none focus:ring-0 focus:border-white"></textarea>
+                                @error('projectBrief') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
+                            </div>
+                            <div class="flex gap-4 justify-center mt-6">
+                                <x-silicon-valley.action-button onclick="previouse('step3')" :title="'Previous'"  class="!bg-sv-primary hover:!bg-sv-secondary/30 border border-white"/>
+                                <x-silicon-valley.action-button type="Submit" :title="'Submit'" class="hover:bg-sv-secondary/50"/>
+                            </div>
                         </div>
                     </div>
                 </div>
