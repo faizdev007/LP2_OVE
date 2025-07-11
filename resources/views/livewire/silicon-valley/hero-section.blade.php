@@ -94,7 +94,7 @@
             </fieldset>
             <!-- Save Button -->
             <div class="absolute -top-10 px-2 end-0 flex justify-center">
-                <button type="submit" wire:loading.attr="disabled" class="px-6 py-3 cursor-pointer bg-black text-white rounded-full hover:bg-blue-600 transition">
+                <button type="submit" wire:loading.attr="disabled" class="px-6 py-3 cursor-pointer bg-bacancy-primary text-white rounded-full hover:bg-blue-600 transition">
                     <span wire:loading wire:target="save">saving...</span>
                     <span wire:loading.remove wire:target="save">Save</span>
                 </button>

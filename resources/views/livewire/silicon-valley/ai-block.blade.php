@@ -1,7 +1,7 @@
-<div class="py-12 flex items-center justify-center border-b border-white scroll-mt-20 bg-sv-gradient-reverse" section="AI-ET">
+<div class="py-12 border-b border-white scroll-mt-20 bg-sv-gradient-reverse" section="AI-ET">
     {{-- Nothing in the world is as soft and yielding as water. --}}
     @if(Route::currentRouteName() === 'create_lp_content' || Route::currentRouteName() === 'livewire.update' && auth()->check())
-        <fieldset class="relative max-w-6xl p-4 rounded mx-auto border-2 border-black">
+        <fieldset class="container relative p-4 rounded mx-auto border-2 border-white">
             <x-messagestatus :successMessage="$successMessage" :errorMessage="$errorMessage"></x-messagestatus>
             <legend class="text-xl font-bold text-gray-900 bg-gray-100 border border-black markque px-2">AI-Enhanced-Talent</legend>
             <p class="text-white">Customize the AI-Enhanced-Talent section of your Bacancy landing page.</p>
@@ -21,7 +21,7 @@
                         };
                         reader.readAsDataURL(file);
                     }
-                }" wire:submit.prevent="save" class="mt-2 flex-1 overflow-hidden max-w-7xl mx-auto ">
+                }" wire:submit.prevent="save" class="mt-2 flex-1 overflow-hidden mx-auto ">
                 <div class="md:flex mb-3">
                     <input wire:model="aiblock_title" type="text"
                             class="bg-white md:text-md xl:text-xl sm:text-sm text-xs text-black border p-2  border-bacancy-primary rounded-md w-full"
@@ -131,7 +131,7 @@
 
                 <!-- Save Button -->
                 <div class="absolute -top-10 px-2 end-0 flex justify-center">
-                    <button type="submit" wire:loading.attr="disabled" class="px-6 py-3 bg-black cursor-pointer text-white rounded-full hover:bg-gray-800 transition">
+                    <button type="submit" wire:loading.attr="disabled" class="px-6 py-3 bg-bacancy-primary cursor-pointer text-white rounded-full hover:bg-gray-800 transition">
                         <span wire:loading wire:target="save">saving...</span>
                         <span wire:loading.remove wire:target="save">Save</span>
                     </button>
