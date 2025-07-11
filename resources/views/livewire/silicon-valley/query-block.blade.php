@@ -51,7 +51,7 @@
                 >
                     <div class="py-20 flex flex-col items-center gap-6">
                         <p class="font-mono text-base sm:text-lg md:text-xl font-bold text-center">
-                            &lt; Which technologies do you require? / &gt;
+                            &lt; When do you wish to hire? / &gt;
                         </p>
                         <div class="space-y-3 md:w-1/2 text-start sm:space-y-4 pl-1 sm:pl-3">
                             <!-- Repeat same labels -->
