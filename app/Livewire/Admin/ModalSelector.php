@@ -12,6 +12,7 @@ class ModalSelector extends Component
     public $modalOptions = [
         '' => '-- Select a Modal --',
         'modal.bacancy' => 'Bacancy Modal',
+        'modal.silicon-valley' => 'Silicon Valley Modal',
     ];
 
     public function render()

@@ -77,8 +77,8 @@
             {{ $slot }}
         <main>
         
-        <flux:modal name="book-a-call" :show="$errors->isNotEmpty()" focusable class="max-w-5xl overflow-hidden !bg-bacancy-primary !p-0">
-            <livewire:modal.bacancy/>
+        <flux:modal name="book-a-call" :show="$errors->isNotEmpty()" focusable class="max-w-5xl overflow-hidden !bg-sv-primary !p-0">
+            <livewire:modal.silicon-valley/>
         </flux:modal>
         <script>
             (function() {

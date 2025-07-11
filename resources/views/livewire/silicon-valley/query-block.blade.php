@@ -20,15 +20,15 @@
                         <div class="space-y-3 md:w-1/2 text-start sm:space-y-4 pl-1 sm:pl-3">
                             @php
                                 $devsOptions = [
-                                    'one' => 'One',
-                                    'moreThenOne' => 'More Than One',
-                                    'crossFunctionalTeam' => 'I am looking for a cross-functional team',
-                                    'notSureYet' => "I'm not sure yet"
+                                    'Requred One developer' => 'Requred One developer',
+                                    'Requred More Than One developer' => 'Requred More Than One developer',
+                                    'I am looking for a cross-functional team' => 'I am looking for a cross-functional team',
+                                    "I'm not sure yet" => "I'm not sure yet"
                                 ];
                             @endphp
                             @foreach ($devsOptions as $value => $label)
                                 <label class="flex items-center space-x-3">
-                                    <input type="radio" value="{{$value}}" wire:model="devs" class="accent-white w-5 h-5" />
+                                    <input type="radio" value="{{$value}}" wire:model="requriedpoeple" class="accent-white w-5 h-5" />
                                     <span class="font-mono text-sm sm:text-base flex-1 text-gray-300">{{$label}}</span>
                                 </label>
                             @endforeach
@@ -57,15 +57,15 @@
                             <!-- Repeat same labels -->
                             @php
                                 $devsOptions = [
-                                    'today' => 'Today',
-                                    'inOneWeek' => 'In a week',
-                                    'inMonth' => 'In a month',
+                                    'Today' => 'Today',
+                                    'In a week' => 'In a week',
+                                    'In a month' => 'In a month',
                                     'later' => "later"
                                 ];
                             @endphp
                             @foreach ($devsOptions as $value => $label)
                                 <label class="flex items-center space-x-3">
-                                    <input type="radio" value="{{$value}}" wire:model="hirefor" class="accent-white w-5 h-5" />
+                                    <input type="radio" value="{{$value}}" wire:model="requiredwithin" class="accent-white w-5 h-5" />
                                     <span class="font-mono text-sm sm:text-base flex-1 text-gray-300">{{$label}}</span>
                                 </label>
                             @endforeach
