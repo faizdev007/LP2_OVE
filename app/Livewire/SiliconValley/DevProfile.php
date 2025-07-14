@@ -35,7 +35,7 @@ class DevProfile extends Component
                 'starts'=> 5,
                 'techStack'=> 'PHP, Laravel, Vue.js',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam.',
-                'image' => 'assets/siliconvalley/devprofile/ethan.webp',
+                'image' => 'assets/siliconvalley/devprofile/Ethan.webp',
                 'projects' => [null,null,null,null]
             ],
             [
@@ -43,7 +43,7 @@ class DevProfile extends Component
                 'starts'=> 4,
                 'techStack'=> 'Django, React, AWS',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam.',
-                'image' => 'assets/siliconvalley/devprofile/isla.webp',
+                'image' => 'assets/siliconvalley/devprofile/Isla.webp',
                 'projects' => [null,null,null,null]
             ],
             [
@@ -51,7 +51,7 @@ class DevProfile extends Component
                 'starts'=> 4.3,
                 'techStack'=> 'Go, Kubernetes, PostgreSQL',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam.',
-                'image' => 'assets/siliconvalley/devprofile/alexander.webp',
+                'image' => 'assets/siliconvalley/devprofile/Alexander.webp',
                 'projects' => [null,null,null,null]
             ]
         ];
