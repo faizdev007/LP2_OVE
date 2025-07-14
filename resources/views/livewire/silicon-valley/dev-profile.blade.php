@@ -61,6 +61,15 @@
                                     <span class="text-red-500 text-xs">{{ $message }}</span>
                                 @enderror
                             </div>
+                            <div class="flex-1 flex flex-col gap-2 mb-4">
+                                <input type="text"
+                                    wire:model="devProfile.{{ $key }}.techStack"
+                                    class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    placeholder="Enter Rating" />
+                                @error("devProfile.$key.techStack")
+                                    <span class="text-red-500 text-xs">{{ $message }}</span>
+                                @enderror
+                            </div>
                         </div>
 
                         <div class="flex flex-col gap-2 mb-4">

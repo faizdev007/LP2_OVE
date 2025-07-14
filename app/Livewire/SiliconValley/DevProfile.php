@@ -25,6 +25,7 @@ class DevProfile extends Component
             [
                 'name'=> 'Isabella',
                 'starts'=> 4.5,
+                'techStack'=> 'PHP, Laravel, Vue.js',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam.',
                 'image' => 'assets/siliconvalley/devprofile/devprofile.webp',
                 'projects' => [null,null,null,null]
@@ -37,6 +38,7 @@ class DevProfile extends Component
         return [
             'name' => '',
             'starts'=> 4.5,
+            'techStack' => '',
             'description' => '',
             'image' => null,
             'projects' => [null,null,null,null]

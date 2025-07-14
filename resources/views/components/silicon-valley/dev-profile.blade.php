@@ -61,7 +61,20 @@
                 </div>
             </div>
             <p>{{$devProfile['description']}}</p>
-            <span><code><</code>What We Did <code>/ ></code></span>
+            @if(isset($devProfile['techStack']))
+                <span><code><</code>Tech I work on <code>/ ></code></span>
+                <div class="flex gap-2 ">
+                    @php
+                        $techstacks = explode(',',$devProfile['techStack']);
+                    @endphp
+                    @foreach ($techstacks as $item)
+                        <div class="flex flex-col items-center">
+                            <span class="text-sm p-1 rounded-full px-4 border shadow drop-shadow bg-black font-bold">{{ trim($item) ?? '' }}</span>
+                        </div>
+                    @endforeach
+                </div>
+            @endif
+            <span><code><</code>What I Achive <code>/ ></code></span>
             <div class="flex gap-4 ">
                 @php
                     $whatWeDid = $devProfile['projects'] ?? [];
