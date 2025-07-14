@@ -10,7 +10,7 @@
                 <div class="absolute inset-0 top-4 -bottom-3 z-0 end-4 -start-3  border-2 border-white rounded-full"></div>
                 <!-- <div class="absolute inset-0 bg-sv-secondary rounded-full"></div> -->
                 <div class="aspect-square xl:w-[400px] xl:h-[400px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden relative z-10">
-                    <img src="{{asset($devProfile['image'])}}" alt="devprofile" class="object-cover"/>
+                    <img src="{{asset($devProfile['image'])}}" alt="devprofile" class="object-cover w-full h-full"/>
                 </div>
             </div>
         </div>
@@ -74,7 +74,7 @@
                     @endforeach
                 </div>
             @endif
-            <span><code><</code>What I Achive <code>/ ></code></span>
+            <span><code><</code>What I Achived <code>/ ></code></span>
             <div class="flex gap-4 ">
                 @php
                     $whatWeDid = $devProfile['projects'] ?? [];

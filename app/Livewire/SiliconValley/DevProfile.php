@@ -29,6 +29,30 @@ class DevProfile extends Component
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam.',
                 'image' => 'assets/siliconvalley/devprofile/devprofile.webp',
                 'projects' => [null,null,null,null]
+            ],
+            [
+                'name'=> 'Ethan',
+                'starts'=> 5,
+                'techStack'=> 'PHP, Laravel, Vue.js',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam.',
+                'image' => 'assets/siliconvalley/devprofile/ethan.webp',
+                'projects' => [null,null,null,null]
+            ],
+            [
+                'name'=> 'Isla',
+                'starts'=> 4,
+                'techStack'=> 'Django, React, AWS',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam.',
+                'image' => 'assets/siliconvalley/devprofile/isla.webp',
+                'projects' => [null,null,null,null]
+            ],
+            [
+                'name'=> 'Alexander',
+                'starts'=> 4.3,
+                'techStack'=> 'Go, Kubernetes, PostgreSQL',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam.',
+                'image' => 'assets/siliconvalley/devprofile/alexander.webp',
+                'projects' => [null,null,null,null]
             ]
         ];
     }
