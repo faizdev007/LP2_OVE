@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" href="{{asset('/favicon.svg')}}">
 
 <!-- @vite(['resources/css/app.css', 'resources/js/app.js']) -->
-<link rel="stylesheet" href="{{ asset('build/assets/app-BW7Fc0f-.css') }}">
+<link rel="stylesheet" href="{{ asset('build/assets/app-Ct6Cch_A.css') }}">
 <script src="{{ asset('build/assets/app-l0sNRNKZ.js') }}" defer></script>
 @fluxAppearance
 

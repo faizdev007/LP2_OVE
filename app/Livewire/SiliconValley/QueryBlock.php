@@ -35,7 +35,7 @@ class QueryBlock extends Component
         
         // Create a new RequestQuery instance
 
-        $query = RequestQuery::create([
+            $query = RequestQuery::create([
                 'name'=>$this->name,
                 'email'=>$this->email,
                 'phone'=>$this->phone,

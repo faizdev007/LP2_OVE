@@ -112,32 +112,32 @@
                         <div class="md:text-xl lg:text-[30px] 2xl:text-[40px] text-xl font-extrabold vast-shadow-bold">{!!$hero_shorttext!!}</div>
                     </div>
                     <flux:modal.trigger name="book-a-call">
-                        <x-silicon-valley.action-button class="" x-data="" x-on:click.prevent="$dispatch('open-modal', 'book-a-call')" title="{{ 'Hire a Developer' }}" class="hover:bg-sv-secondary/50 text-lg md:text-xl md:text-2xl lg:text-3xl" />
+                        <x-silicon-valley.action-button class="" x-data="" x-on:click.prevent="$dispatch('open-modal', 'Hire Now')" title="{{ $buttonText }}" class="hover:bg-sv-secondary/50 text-lg md:text-xl md:text-2xl lg:text-3xl" />
                     </flux:modal.trigger>
                 </div>
             </div>
             <div class="md:w-[40%] w-full flex justify-center items-center relative">
                 <div class="aspect-[1.3/2] rounded-xl p-1 lg:h-3/4 md:h-2/3 w-1/2 md:w-auto border-2 border-white relative">
-                    <img class="aspect-[1.3/2] object-container rounded-xl h-full absolute top-2 start-2" src="{{asset('assets/siliconvalley/herosection/heroimage.webp')}}"/>
+                    <img class="aspect-[1.3/2] object-cover rounded-xl h-full absolute top-2 start-2" src="{{asset($heroPortfolio['image'])}}"/>
                     <div class="w-full h-full relative">
                         <div class="bg-white shadow-md aspect-[1.5/1] 2xl:h-18 h-12 md:h-16 flex justify-center  animate-[bounce_2.7s_ease-in-out_infinite] max-w-auto p-2 rounded absolute top-5 -start-10">
-                            <img loading="eager" class="h-full object-container" src="{{asset('assets/siliconvalley/herosection/nodejs.webp')}}" alt="node.js">
+                            <img loading="eager" class="h-full object-container" src="{{asset($floatingIcons[0])}}" alt="node.js">
                         </div>
                         <div class="bg-white shadow-md aspect-[1.5/1] 2xl:h-18 h-12 md:h-16 flex justify-center  animate-[bounce_2.3s_ease-in-out_infinite] max-w-auto p-2 rounded absolute -top-5 -end-10">
-                            <img loading="eager" class="h-full object-container" src="{{asset('assets/siliconvalley/herosection/python.webp')}}" alt="python">
+                            <img loading="eager" class="h-full object-container" src="{{asset($floatingIcons[1])}}" alt="python">
                         </div>
                         <div class="bg-white shadow-md aspect-[1.5/1] 2xl:h-18 h-12 md:h-16 flex justify-center animate-[bounce_3s_ease-in-out_infinite] max-w-auto p-2 rounded absolute bottom-5 -start-10">
-                            <img loading="eager" class="h-full object-container" src="{{asset('assets/siliconvalley/herosection/firebase.webp')}}" alt="firebase">
+                            <img loading="eager" class="h-full object-container" src="{{asset($floatingIcons[2])}}" alt="firebase">
                         </div>
                         <div class="bg-white shadow-md aspect-[1.5/1] 2xl:h-18 h-12 md:h-16 flex justify-center animate-[bounce_2s_ease-in-out_infinite] max-w-auto p-2 rounded absolute bottom-20 -end-10">
-                            <img loading="eager" class="h-full object-container" src="{{asset('assets/siliconvalley/herosection/react.webp')}}" alt="react">
+                            <img loading="eager" class="h-full object-container" src="{{asset($floatingIcons[3])}}" alt="react">
                         </div>
                     </div>
                     <div class="border-e border-b pb-1 pe-1 absolute -bottom-6 md:-end-10 -end-20 rounded-lg border-white">
                         <div class="bg-sv-primary p-3 py-1 rounded">  
-                            <p class="text-center md:text-md 2xl:text-lg text-xs m-2">Jenny Doe</p>
+                            <p class="text-center md:text-md 2xl:text-lg text-xs m-2">{{$heroPortfolio['name']}}</p>
                             <hr class="border-gray-200">
-                            <div class="bg-gray-200/20 md:text-sm 2xl:text-lg text-xs p-1 px-2 rounded w-max m-2">Sr. AI Engineer</div>
+                            <div class="bg-gray-200/20 md:text-sm 2xl:text-lg text-xs p-1 px-2 rounded w-max m-2">{{$heroPortfolio['title']}}</div>
                         </div>
                     </div>
                 </div>

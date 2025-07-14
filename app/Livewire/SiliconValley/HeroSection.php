@@ -64,12 +64,12 @@ class HeroSection extends Component
             }
 
             if (isObject($this->heroPortfolio['image'])) {
-                $this->heroPortfolio['image'] = HelperFacade::uploadFile($this->heroPortfolio['image'], 'siliconvalley/developer/photos');
+                $this->heroPortfolio['image'] = HelperFacade::uploadFile($this->heroPortfolio['image'], 'siliconvalley/herosection/photo');
             }
             
             foreach ($this->floatingIcons as $key => $single) {
                 if (isObject($single)) {
-                    $this->floatingIcons[$key] = HelperFacade::uploadFile($single, 'siliconvalley/floatingIcons/photos');
+                    $this->floatingIcons[$key] = HelperFacade::uploadFile($single, 'siliconvalley/herosection/floatingIcons');
                 }
             }
             

@@ -2,9 +2,12 @@
 
 namespace App\Livewire\SiliconValley;
 
+use App\Facades\HelperFacade;
 use App\Facades\LandingPagePatch;
 use Livewire\Component;
 use Livewire\Features\SupportFileUploads\WithFileUploads;
+
+use function PHPUnit\Framework\isObject;
 
 class DevProfile extends Component
 {
@@ -21,28 +24,59 @@ class DevProfile extends Component
         $this->devProfile = $jsonData['devProfile'] ?? [
             [
                 'name'=> 'Isabella',
+                'starts'=> 4.5,
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam.',
                 'image' => 'assets/siliconvalley/devprofile/devprofile.webp',
-                'projects' => [
-                    ['image' => 'assets/siliconvalley/devprofile/whatwedid1.webp', 'title' => 'Project Management'],
-                    ['image' => 'assets/siliconvalley/devprofile/whatwedid2.webp', 'title' => 'Web Development'],
-                    ['image' => 'assets/siliconvalley/devprofile/whatwedid3.webp', 'title' => 'Mobile Apps'],
-                    ['image' => 'assets/siliconvalley/devprofile/whatwedid4.webp', 'title' => 'AI Solutions'],
-                ]
+                'projects' => [null,null,null,null]
             ]
         ];
     }
 
+    public function defaultProfile()
+    {
+        return [
+            'name' => '',
+            'starts'=> 4.5,
+            'description' => '',
+            'image' => null,
+            'projects' => [null,null,null,null]
+        ];
+    }
+
+    public function addProfile()
+    {
+        $this->devProfile[] = $this->defaultProfile();
+    }
+
+    public function removeProfile($index)
+    {
+        unset($this->devProfile[$index]);
+        $this->devProfile = array_values($this->devProfile); // Reindex
+    }
+
     public function save()
     {
-        dd($this);
         try {
-            $this->validate([
-                'devProfile.name' => 'required|max:255',
-                'devProfile.description' => 'required',
-                'devProfile.image' => 'nullable|image|max:2048', // Optional image validation
-                'devProfile.projects' => 'required|array',
-            ]);
+            foreach ($this->devProfile as $key => $value) {
+                $this->validate([
+                    "devProfile.$key.name" => 'required|max:255',
+                    "devProfile.$key.description" => 'required',
+                    "devProfile.$key.image" => 'nullable|max:200', // Optional image validation
+                    "devProfile.$key.projects" => 'required|array',
+                ]);
+
+
+
+                if(isObject($value['image'])){
+                    $this->devProfile[$key]['image'] = HelperFacade::uploadFile($value['image'], 'siliconvalley/devprofile/photo');
+                }
+                
+                foreach($value['projects'] as $projectKey => $projectImage) {
+                    if (isObject($projectImage)) {
+                        $this->devProfile[$key]['projects'][$projectKey] = HelperFacade::uploadFile($projectImage, 'siliconvalley/devprofile/projects');
+                    }
+                }
+            }
 
             $contentdata = isset($this->lp_data['page_contect']) ? json_decode($this->lp_data['page_contect'], true) : [];
             
