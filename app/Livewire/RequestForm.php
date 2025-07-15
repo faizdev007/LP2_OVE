@@ -17,7 +17,7 @@ class RequestForm extends Component
 
     public function submitquery(Request $request)
     {
-
+        dd($this);
         try {
             $this->validate([
                 'name' => ['required'],

@@ -127,7 +127,12 @@
                             </div>
                             <div class="flex gap-4 justify-center mt-6">
                                 <x-silicon-valley.action-button onclick="previouse('step3')" :title="'Previous'"  class="!bg-sv-primary hover:!bg-sv-secondary/30 border border-white"/>
-                                <x-silicon-valley.action-button type="Submit" :title="'Submit'" class="hover:bg-sv-secondary/50"/>
+                                <x-submit-button 
+                                    type="submit" 
+                                    title="Submit" 
+                                    target="submitForm"
+                                    class="hover:bg-sv-secondary/50 bg-sv-secondary !py-2 !rounded-full"
+                                />
                             </div>
                         </div>
                     </div>
