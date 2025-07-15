@@ -1,9 +1,9 @@
 <div class="border-b border-white text-white bg-sv-gradient-bottomtop pt-10 relative">
     <div class="pt-6 h-full relative max-w-5xl mx-auto text-center">
         <h2 class="text-center text-white md:text-3xl text-2xl font-bold mb-10">
-            <code><</code>Heading Goes Here <code>/ ></code>
+            <code><</code>Communication is the Key to Better Problem-Solving <code>/ ></code>
         </h2>
-        <p class="mb-6">Lorem ipsum dolor amet consectetur adipiscing elitsed eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="mb-6">Tell us what you need and we’ll give you a transparent cost breakdown—no hidden fees.</p>
 
         <div class="w-full px-3 bottom-0 mx-auto">
             <form wire:submit.prevent="submitForm" class="relative overflow-hidden">

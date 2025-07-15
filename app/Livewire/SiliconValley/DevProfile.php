@@ -23,35 +23,35 @@ class DevProfile extends Component
         $jsonData = isset($lp_data['page_contect']) ? json_decode($lp_data['page_contect'], true) : [];
         $this->devProfile = $jsonData['devProfile'] ?? [
             [
-                'name'=> 'Isabella',
+                'name'=> 'Rohan',
                 'starts'=> 4.5,
-                'techStack'=> 'PHP, Laravel, Vue.js',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam.',
-                'image' => 'assets/siliconvalley/devprofile/devprofile.webp',
+                'techStack'=> 'React, Next.js, TypeScript, Tailwind CSS',
+                'description' => 'Specializes in crafting lightning-fast, SEO-optimized web applications using cutting-edge front-end technologies and modern SSR practices. Delivers clean, maintainable code with strong attention to UI/UX detail.',
+                'image' => 'assets/siliconvalley/devprofile/developer2.webp',
                 'projects' => [null,null,null,null]
             ],
             [
-                'name'=> 'Ethan',
+                'name'=> 'Priyanshi',
                 'starts'=> 5,
-                'techStack'=> 'PHP, Laravel, Vue.js',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam.',
-                'image' => 'assets/siliconvalley/devprofile/Ethan.webp',
+                'techStack'=> 'React, Node.js, MongoDB',
+                'description' => ' Expert in building scalable, secure, and modular full-stack applications with modern JavaScript frameworks. Passionate about clean architecture and continuous delivery.',
+                'image' => 'assets/siliconvalley/devprofile/developer3.webp',
                 'projects' => [null,null,null,null]
             ],
             [
-                'name'=> 'Isla',
+                'name'=> 'Siddharth',
                 'starts'=> 4,
-                'techStack'=> 'Django, React, AWS',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam.',
-                'image' => 'assets/siliconvalley/devprofile/Isla.webp',
+                'techStack'=> 'React, Node.js, PostgreSQL',
+                'description' => 'Designs and develops high-performance, enterprise-grade full-stack solutions with a focus on data integrity, performance optimization, and intuitive user experiences.',
+                'image' => 'assets/siliconvalley/devprofile/developer4.webp',
                 'projects' => [null,null,null,null]
             ],
             [
-                'name'=> 'Alexander',
+                'name'=> 'Anjali',
                 'starts'=> 4.3,
-                'techStack'=> 'Go, Kubernetes, PostgreSQL',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam.',
-                'image' => 'assets/siliconvalley/devprofile/Alexander.webp',
+                'techStack'=> 'Laravel, Vue.js, MySQL',
+                'description' => 'Builds modern, interactive web applications with clean backend logic and elegant front-end components. Strong focus on API design, performance, and maintainability.',
+                'image' => 'assets/siliconvalley/devprofile/developer5.webp',
                 'projects' => [null,null,null,null]
             ]
         ];

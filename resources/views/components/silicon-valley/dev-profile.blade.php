@@ -74,18 +74,20 @@
                     @endforeach
                 </div>
             @endif
-            <span><code><</code>What I Achived <code>/ ></code></span>
-            <div class="flex gap-4 ">
-                @php
-                    $whatWeDid = $devProfile['projects'] ?? [];
-                @endphp
-                @foreach ($whatWeDid as $item)
-                    <div class="flex flex-col aspect-[1.9/2] items-center">
-                        <img class="w-full bg-sv-secondary h-full object-cover rounded" src="{{ asset($item['image'] ?? '') }}" alt="{{ $item['title'] ?? ''}}">
-                        <span class="hidden text-sm mt-2">{{ $item['title'] ?? '' }}</span>
-                    </div>
-                @endforeach
-            </div>
+            @if(count($devProfile['projects']) > 0)
+                <span class="hidden"><code><</code>What I Achived <code>/ ></code></span>
+                <div class="flex gap-4 hidden">
+                    @php
+                        $whatWeDid = $devProfile['projects'] ?? [];
+                    @endphp
+                    @foreach ($whatWeDid as $item)
+                        <div class="flex flex-col aspect-[1.9/2] items-center">
+                            <img class="w-full bg-sv-secondary h-full object-cover rounded" src="{{ asset($item['image'] ?? '') }}" alt="{{ $item['title'] ?? ''}}">
+                            <span class="hidden text-sm mt-2">{{ $item['title'] ?? '' }}</span>
+                        </div>
+                    @endforeach
+                </div>
+            @endif
         </div>
     </div>
 </div>

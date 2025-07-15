@@ -32,18 +32,14 @@
     <div class="">
         <div class="relative gap-4 overflow-hidden mx-auto h-full">
             <div class="relative w-screen overflow-hidden md:py-18 px-4 py-2 md:-ml-8 -ml-4 h-20 mt-10 z-10 -rotate-6">
-                <div class="animate-marquee flex text-nowrap w-max" style="animation-duration: 50s;">
-                    <span class="text-5xl font-bold px-4">
-                        {{$sliding_text}}
-                    </span>
-                    <!-- Duplicate to simulate infinite effect -->
+                <div class="animate-marquee flex text-nowrap w-max" style="animation-duration: 15s;">
                     <span class="text-5xl font-bold px-4">
                         {{$sliding_text}}
                     </span>
                 </div>
             </div>
 
-            <p class="md:max-w-5xl md:text-2xl text-justify md:mt-26 mt-12 mx-auto">{!!$paragraph!!}</p>
+            <p class="md:max-w-5xl md:text-2xl text-center md:mt-26 mt-12 mx-auto">{!!$paragraph!!}</p>
         </div>
     </div>
     @endif

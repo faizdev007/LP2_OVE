@@ -133,7 +133,7 @@
                             <img loading="eager" class="h-full object-container" src="{{asset($floatingIcons[3])}}" alt="react">
                         </div>
                     </div>
-                    <div class="border-e border-b pb-1 pe-1 absolute -bottom-6 md:-end-10 -end-20 rounded-lg border-white">
+                    <div class="border-e border-b pb-1 pe-1 absolute md:-bottom-6 -bottom-10 md:-end-20 -end-20 rounded-lg border-white">
                         <div class="bg-sv-primary p-3 py-1 rounded">  
                             <p class="text-center md:text-md 2xl:text-lg text-xs m-2">{{$heroPortfolio['name']}}</p>
                             <hr class="border-gray-200">

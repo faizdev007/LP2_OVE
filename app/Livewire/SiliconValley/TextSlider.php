@@ -16,8 +16,8 @@ class TextSlider extends Component
         $this->lp_data = isset($lp_data) ? $lp_data : [];
         $jsonData = isset($lp_data['page_contect']) ? json_decode($lp_data['page_contect'],true) : [];
         $textslide = $jsonData['textslide'] ?? [];
-        $this->sliding_text = $textslide['sliding_text'] ?? 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text';
-        $this->paragraph = $textslide['paragraph'] ?? "< Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. />";
+        $this->sliding_text = $textslide['sliding_text'] ?? '<Words> Are Easy, <Execution> is What Matters — Meet Our <Experts>';
+        $this->paragraph = $textslide['paragraph'] ?? "< Buzzwords are loud. Results speak louder. >";
     }
 
     public function save()

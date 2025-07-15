@@ -29,8 +29,6 @@ class QueryBlock extends Component
             'project_brief.required' => 'Please describe your project.'
         ]);
 
-        // dd($this);
-
         $messageupdate = 'Requirement : '.($this->requriedpoeple ?? '').' / When do you want it : '.($this->requiredwithin ?? '').' '.(' / Project Brief : ' .$this->project_brief);
         
         // Create a new RequestQuery instance
