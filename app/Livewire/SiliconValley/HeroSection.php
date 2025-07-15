@@ -27,7 +27,7 @@ class HeroSection extends Component
         $this->hero_title = $hero['hero_title'] ?? 'Powered by';
         $this->hero_shorttext = $hero['hero_shorttext'] ?? '< Top Tech Talent />';
         $this->buttonText = $hero['buttonText'] ?? 'Hire a Software Developer';
-        $this->heroPortfolio =$hero['heroPortfolio'] ?? ['image' => 'assets/siliconvalley/herosection/hero_section_person.webp', 'name'=>'Sharad', 'title' => 'Full Stack Developer', 'description' => 'Jenny is a Full Stack Developer with over 5 years of experience in building scalable web applications.'];
+        $this->heroPortfolio =$hero['heroPortfolio'] ?? ['image' => 'assets/siliconvalley/herosection/Matilda.webp', 'name'=>'Matilda', 'title' => 'Full Stack Developer', 'description' => 'Matilda is a Full Stack Developer with over 5 years of experience in building scalable web applications.'];
         $this->floatingIcons = $hero['floatingIcons'] ?? ['assets/siliconvalley/herosection/nodejs.webp','assets/siliconvalley/herosection/python.webp','assets/siliconvalley/herosection/firebase.webp','assets/siliconvalley/herosection/react.webp'];
     }
 

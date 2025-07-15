@@ -7,7 +7,7 @@
                 letters: Object.keys(@json($techjson)), 
                 techjsonlist: @json($techjson)
             }' 
-            class="p-6 py-12 max-w-7xl mx-auto"
+            class="p-6 py-12 2xl:max-w-7xl mx-auto"
         >
             <h2 class="text-center text-white md:text-3xl text-2xl font-bold mb-10">
                 < A > to < Z >, every skill, every stack — all under one roof.
