@@ -1,4 +1,4 @@
-<div class="py-10 border-b border-white overflow-hidden bg-sv-gradient-topbottom text-white">
+<div class="overflow-hidden bg-sv-gradient-topbottom text-white">
     {{-- Close your eyes. Count to one. That is how long forever feels. --}}
     @if(Route::currentRouteName() === 'create_lp_content' || Route::currentRouteName() === 'livewire.update' && auth()->check())
         <fieldset class="container relative text-white max-w-6xl p-4 rounded mx-auto border-2 border-white">
@@ -31,15 +31,15 @@
     @else
     <div class="">
         <div class="relative gap-4 overflow-hidden mx-auto h-full">
-            <div class="relative w-screen overflow-hidden md:py-18 px-4 py-2 md:-ml-8 -ml-4 h-20 mt-10 z-10 -rotate-6">
-                <div class="animate-marquee flex text-nowrap w-max" style="animation-duration: 15s;">
+            <div class="relative w-screen overflow-hidden px-4 h-20 md:mt-30 mt-10 z-10 -rotate-5">
+                <div class="animate-marquee flex text-nowrap w-max" style="animation-duration: 25s;">
                     <span class="text-5xl font-bold px-4">
                         {{$sliding_text}}
                     </span>
                 </div>
             </div>
 
-            <p class="md:max-w-5xl md:text-2xl text-center md:mt-26 mt-12 mx-auto">{!!$paragraph!!}</p>
+            <p class="md:max-w-5xl md:text-2xl text-center mt-12 mx-auto">{!!$paragraph!!}</p>
         </div>
     </div>
     @endif

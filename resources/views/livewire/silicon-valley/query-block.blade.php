@@ -20,8 +20,8 @@
                         <div class="space-y-3 md:w-1/2 text-start sm:space-y-4 pl-1 sm:pl-3">
                             @php
                                 $devsOptions = [
-                                    'Requred One developer' => 'Requred One developer',
-                                    'Requred More Than One developer' => 'Requred More Than One developer',
+                                    'One developer' => 'One developer',
+                                    'More Than One developer' => 'More Than One developer',
                                     'I am looking for a cross-functional team' => 'I am looking for a cross-functional team',
                                     "I'm not sure yet" => "I'm not sure yet"
                                 ];
@@ -60,7 +60,7 @@
                                     'Today' => 'Today',
                                     'In a week' => 'In a week',
                                     'In a month' => 'In a month',
-                                    'later' => "later"
+                                    'Not Sure' => "Not Sure"
                                 ];
                             @endphp
                             @foreach ($devsOptions as $value => $label)
@@ -91,7 +91,7 @@
                 >
                     <div class="py-20 flex flex-col items-center gap-6 pb-4">
                         <p class="font-mono text-base sm:text-lg md:text-xl font-bold text-center">
-                            &lt; Tell Us more about your Project? / &gt;
+                            &lt; Tell Us more about your requirement? / &gt;
                         </p>
                         <div class="">
                             <div class="my-4">

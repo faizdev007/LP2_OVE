@@ -1,4 +1,4 @@
-<div class="py-12 border-b border-white scroll-mt-20 bg-sv-gradient-reverse" section="AI-ET">
+<div class="py-12 border-b border-white scroll-mt-20 bg-sv-gradient" section="AI-ET">
     {{-- Nothing in the world is as soft and yielding as water. --}}
     @if(Route::currentRouteName() === 'create_lp_content' || Route::currentRouteName() === 'livewire.update' && auth()->check())
         <fieldset class="container relative p-4 rounded mx-auto border-2 border-white">
@@ -153,7 +153,7 @@
             </flux:modal.trigger>
         </div>
         <div class="flex-1 w-full flex items-center justify-center relative">
-            <div class="relative rounded-lg overflow-hidden bg-sv-primary p-8 items-center flex w-full md:w-auto p-4 gap-6">
+            <div class="relative rounded-lg overflow-hidden bg-sv-primary inset-0 inset-shadow-sm inset-shadow-black p-8 items-center flex w-full md:w-auto p-4 gap-6">
                 <div class="flex flex-1 items-center justify-center w-full">
                     <img loading="eager" decoding="async" src="{{ asset($logo_webp) }}" alt="Optimal Vertual Employee" class="aspect-square object-container"/>
                 </div>
@@ -163,13 +163,13 @@
                     </svg>
                 </div>
                 <div class="flex-1 w-full flex flex-col justify-around gap-6 items-center">
-                    <div class="bg-white xl:w-32 md:w-24 border h-18 p-4 rounded-lg shadow-lg md:me-10 flex items-center justify-center">
+                    <div class="bg-white xl:w-32 md:w-24 border h-18 md:p-4 p-1 rounded-lg shadow-lg md:me-10 flex items-center justify-center">
                         <img loading="lazy" decoding="async" src="{{ asset($ai_logo_one) }}" alt="AI Image One" class="object-container" />
                     </div>
-                    <div class="bg-white xl:w-32 md:w-24 border h-18 p-4 rounded-lg shadow-lg md:ms-10 flex items-center justify-center">
+                    <div class="bg-white xl:w-32 md:w-24 border h-18 md:p-4 p-1 rounded-lg shadow-lg md:ms-10 flex items-center justify-center">
                         <img loading="lazy" decoding="async" src="{{ asset($ai_logo_two) }}" alt="AI Image One" class="object-container" />
                     </div>
-                    <div class="bg-white xl:w-32 md:w-24 border h-18 p-4 rounded-lg shadow-lg md:me-10 flex items-center justify-center">
+                    <div class="bg-white xl:w-32 md:w-24 border h-18 md:p-4 p-1 rounded-lg shadow-lg md:me-10 flex items-center justify-center">
                         <img loading="lazy" decoding="async" src="{{ asset($ai_logo_three) }}" alt="AI Image One" class="object-container" />
                     </div>
                 </div>

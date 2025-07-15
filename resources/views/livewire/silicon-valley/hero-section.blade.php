@@ -1,4 +1,4 @@
-<div class="py-12 border-b border-white bg-sv-gradient text-white herobg">
+<div class="py-6 border-b border-white bg-sv-gradient text-white herobg">
     {{-- If your happiness depends on money, you will never be happy with yourself. --}}
     @if(Route::currentRouteName() === 'create_lp_content' || Route::currentRouteName() === 'livewire.update' && auth()->check())
     <fieldset class="container relative text-white max-w-6xl p-4 rounded mx-auto border-2 border-white">
@@ -103,16 +103,16 @@
     </fieldset>   
     @else
     <div class="md:h-screen">
-        <div class="relative md:flex grid flex-1 gap-4 md:space-y-0 space-y-48 py-10 px-4 py-2 sm:px-6 lg:px-8 overflow-hidden mx-auto h-full">
+        <div class="relative md:flex grid flex-1 gap-4 md:space-y-0 space-y-32 py-6 px-4 py-2 sm:px-6 lg:px-8 overflow-hidden mx-auto h-full">
             <div class="md:w-[60%] flex flex-col justify-around md:items-start items-center h-full relative">
-                <div class="relative z-20 flex flex-col gap-4 md:gap-8 items-center justify-around md:items-start h-full md:items-start">
+                <div class="relative z-20 flex flex-col items-center gap-10 justify-center md:items-start h-full md:items-start">
                     <div class="flex flex-col md:text-left text-center gap-8">
                         <p class="md:text-xl 2xl:text-3xl text-xl">{!!$hero_subtitle!!}</p>
                         <h1 class="md:text-4xl lg:text-[50px] 2xl:text-[70px] text-3xl font-extrabold vast-shadow-bold">{!!$hero_title!!}</h1>
                         <div class="md:text-xl lg:text-[30px] 2xl:text-[40px] text-xl font-extrabold vast-shadow-bold">{!!$hero_shorttext!!}</div>
                     </div>
                     <flux:modal.trigger name="book-a-call">
-                        <x-silicon-valley.action-button class="" x-data="" x-on:click.prevent="$dispatch('open-modal', 'Hire Now')" title="{{ $buttonText }}" class="hover:bg-sv-secondary/50 text-lg md:text-xl md:text-2xl lg:text-3xl" />
+                        <x-silicon-valley.action-button class="" x-data="" x-on:click.prevent="$dispatch('open-modal', 'Hire Now')" title="{{ $buttonText }}" class="hover:bg-sv-secondary/50 text-lg md:text-xl 2xl:text-3xl" />
                     </flux:modal.trigger>
                 </div>
             </div>

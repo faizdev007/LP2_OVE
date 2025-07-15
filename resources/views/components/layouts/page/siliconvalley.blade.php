@@ -21,24 +21,48 @@
         @include('partials.head')
     </head>
     <body class="min-h-screen bg-white fira-code -z-10 relative overflow-x-hidden">
-        <flux:header sticky class="border-b bg-sv-primary border-gray-500 p-2">
-            <div class="relative flex-1 gap-2 overflow-hidden mx-auto flex">
+        <div 
+            x-data="{ isSticky: false }" 
+            x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 10 })" 
+            :class="isSticky 
+                ? 'sticky top-0 bg-white backdrop-blur z-50 shadow-md' 
+                : 'absolute top-0 bg-black/50'"
+            id="headerstick" 
+            class="w-full transition-all duration-300 ease-in-out"
+        >
+            <div class="relative border-b border-gray-500 p-2 flex-1 gap-2 overflow-hidden mx-auto flex">
+                <!-- Logo Toggle -->
                 <a href="{{ url()->current() }}" class="flex md:pe-8 items-center space-x-2 rtl:space-x-reverse lg:ms-0" wire:navigate>
-                    <img src="{{ asset('assets/siliconvalley/logo.webp') }}" alt="{{ config('app.name') }}" class="md:h-14 h-10 w-auto" />
+                    <!-- Default Logo -->
+                    <img 
+                        x-show="!isSticky" 
+                        src="{{ asset('assets/siliconvalley/logo.webp') }}" 
+                        alt="{{ config('app.name') }}" 
+                        class="md:h-14 h-10 w-auto transition-all duration-300 ease-in-out"
+                    />
+                    
+                    <!-- Sticky Logo -->
+                    <img 
+                        x-show="isSticky" 
+                        src="{{ asset('assets/siliconvalley/logo2.webp') }}" 
+                        alt="{{ config('app.name') }}" 
+                        class="md:h-12 h-8 w-auto transition-all duration-300 ease-in-out"
+                    />
                 </a>
-
                 <flux:spacer />
         
                 <div>
-                    <nav class="flex items-center gap-4 h-full relative text-white">
-                        <a href="mailto:faiz.alam@optimalvirtual.com" class="border border-white rounded-full p-2 hover:bg-sv-secondary">
+                    <nav :class="isSticky 
+                        ? 'text-black' 
+                        : 'text-white'" class="flex items-center gap-4 h-full relative">
+                        <a href="mailto:faiz.alam@optimalvirtual.com" :class="isSticky ? 'border-black hover:text-white' : ''" class="border rounded-full p-2 hover:bg-sv-secondary">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
                             </svg>
                         </a>
                         <div x-data="{ open: false }" class="relative inline-block text-left">
                             <!-- Button -->
-                            <button @click="open = !open" class="border cursor-pointer border-white rounded-full p-2 hover:bg-sv-secondary">
+                            <button @click="open = !open" :class="isSticky ? 'border-black hover:text-white' : ''" class="border cursor-pointer rounded-full p-2 hover:bg-sv-secondary">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 3.75v4.5m0-4.5h-4.5m4.5 0-6 6m3 12c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
                                 </svg>
@@ -71,7 +95,7 @@
                     </nav>
                 </div>
             </div>
-        </flux:header>
+        </div>
     
         <main class="!p-0 justify-end relative -z-10">
             {{ $slot }}

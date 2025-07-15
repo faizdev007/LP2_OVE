@@ -1,7 +1,7 @@
 <div>
     @props(['devProfile'])
     <div class="relative flex md:flex-row flex-col items-center justify-center gap-4 md:space-y-0 space-y-48 md:py-10 px-4 py-2 sm:px-6 lg:px-8 overflow-hidden mx-auto h-full">
-        <div class="lg:w-none m-4 md:w-[40%] pb-12">
+        <div class="lg:w-none m-4 md:w-[40%] pb-12 flex md:items-center flex-col gap-6">
             <div class="aspect-[1/1] h-full absolute">
                 <img src="{{asset('assets/siliconvalley/globe-bg.webp')}}" class="z-0 animate-[spin_4s_linear_infinite] opacity-30 h-full" alt="Silicon Valley Logo"/>
             </div>
@@ -12,6 +12,11 @@
                 <div class="aspect-square xl:w-[400px] xl:h-[400px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden relative z-10">
                     <img src="{{asset($devProfile['image'])}}" alt="devprofile" class="object-cover w-full h-full"/>
                 </div>
+            </div>
+            <div class="z-20 relative flex justify-center">
+                <flux:modal.trigger name="book-a-call">
+                    <x-silicon-valley.action-button class="" x-data="" x-on:click.prevent="$dispatch('open-modal', 'Hire Now')" title="lets talk to {{$devProfile['name']}}" class="hover:bg-sv-secondary/50 text-lg md:text-xl 2xl:text-3xl" />
+                </flux:modal.trigger>
             </div>
         </div>
         <div class="text-white md:w-[60%] w-full flex gap-6 flex-col space-y-4 relative">
@@ -60,10 +65,10 @@
                     <span class="ml-3 lg:text-sm text-xs" x-text="rating + ' / 5'"></span>
                 </div>
             </div>
-            <p>{{$devProfile['description']}}</p>
+            <p class="">{{$devProfile['description']}}</p>
             @if(isset($devProfile['techStack']))
                 <span><code><</code>Tech I work on <code>/ ></code></span>
-                <div class="flex gap-2 ">
+                <div class="flex gap-2 flex-wrap">
                     @php
                         $techstacks = explode(',',$devProfile['techStack']);
                     @endphp
