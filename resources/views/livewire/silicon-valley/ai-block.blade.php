@@ -163,13 +163,13 @@
                     </svg>
                 </div>
                 <div class="flex-1 w-full flex flex-col justify-around gap-6 items-center">
-                    <div class="bg-white xl:w-32 w-24 border h-18 p-4 rounded-lg shadow-lg me-10 flex items-center justify-center">
+                    <div class="bg-white xl:w-32 md:w-24 border h-18 p-4 rounded-lg shadow-lg md:me-10 flex items-center justify-center">
                         <img loading="lazy" decoding="async" src="{{ asset($ai_logo_one) }}" alt="AI Image One" class="object-container" />
                     </div>
-                    <div class="bg-white xl:w-32 w-24 border h-18 p-4 rounded-lg shadow-lg ms-10 flex items-center justify-center">
+                    <div class="bg-white xl:w-32 md:w-24 border h-18 p-4 rounded-lg shadow-lg md:ms-10 flex items-center justify-center">
                         <img loading="lazy" decoding="async" src="{{ asset($ai_logo_two) }}" alt="AI Image One" class="object-container" />
                     </div>
-                    <div class="bg-white xl:w-32 w-24 border h-18 p-4 rounded-lg shadow-lg me-10 flex items-center justify-center">
+                    <div class="bg-white xl:w-32 md:w-24 border h-18 p-4 rounded-lg shadow-lg md:me-10 flex items-center justify-center">
                         <img loading="lazy" decoding="async" src="{{ asset($ai_logo_three) }}" alt="AI Image One" class="object-container" />
                     </div>
                 </div>
