@@ -30,6 +30,6 @@ class RequestQueriesExport implements FromCollection, WithHeadings
 
     public function headings(): array
     {
-        return ['Name', 'Email', 'Phone', 'Project Brief', 'LP URL', 'IP Address', 'Qeuery Date'];
+        return ['Name', 'Email', 'Phone', 'Requirement', 'LP URL', 'IP Address', 'Qeuery Date'];
     }
 }

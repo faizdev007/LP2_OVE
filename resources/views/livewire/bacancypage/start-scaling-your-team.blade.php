@@ -157,7 +157,7 @@
                         class="p-4 border boreder-white font-bold flex-1 w-full mb-4 focus:ring-0 focus:border-bacancy-primary" required />
                     @error("phone") <span class="text-red-500">{{ $message }}</span> @enderror
                 </div>
-                <textarea wire:model.defer="project_brief" id="project_brief" placeholder="Project Brief" rows="3"
+                <textarea wire:model.defer="project_brief" id="project_brief" placeholder="Requirement" rows="3"
                     class="p-4 border boreder-white font-bold flex-1 w-full mb-4 focus:ring-0 focus:border-bacancy-primary" autocomplete="true" required></textarea>
                 @error("project_brief") <span class="text-red-500">{{ $message }}</span> @enderror
                 <div class="relative flex items-center justify-center">

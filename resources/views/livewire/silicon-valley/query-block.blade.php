@@ -122,7 +122,7 @@
     
                             <div class="my-4">
                                 <label for="project_brief" class="block text-sm font-medium mb-1 hidden">Project Brief</label>
-                                <textarea type="text" rows="2" id="project_brief" placeholder="Project Brief" wire:model.defer="project_brief" class="w-full border-0 border-b border-white bg-transparent px-3 py-2 text-white placeholder-white focus:outline-none focus:ring-0 focus:border-white"></textarea>
+                                <textarea type="text" rows="2" id="project_brief" placeholder="Requirement" wire:model.defer="project_brief" class="w-full border-0 border-b border-white bg-transparent px-3 py-2 text-white placeholder-white focus:outline-none focus:ring-0 focus:border-white"></textarea>
                                 @error('projectBrief') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
                             </div>
                             <div class="flex gap-4 justify-center mt-6">

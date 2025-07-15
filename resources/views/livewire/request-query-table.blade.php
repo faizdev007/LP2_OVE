@@ -33,7 +33,7 @@
                                 Phone
                             </th>
                             <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider cursor-pointer" wire:click="sortBy('created_at')">
-                                Project Brief
+                                Requirement
                             </th>
                         </tr>
                     </thead>
