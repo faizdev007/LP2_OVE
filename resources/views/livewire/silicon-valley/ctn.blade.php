@@ -9,6 +9,6 @@
     </div>
     <div class="text-center mt-8 text-white md:text-md text-xs">
         <p>Copyright © 2009-2025. All Rights Reserved.</p>
-        <p>All client agreements shall be through Optimal Virtual Employee Pvt. Ltd. | <a href="{{route('privacy_policy')}}" class="text-sv-primary underline"> Privacy Policy </a></p>
+        <p>All client agreements shall be through Optimal Virtual Employee Pvt. Ltd. | <a href="{{route('privacy_policy')}}" target="_blank" class="text-sv-primary underline"> Privacy Policy </a></p>
     </div>
 </div>
