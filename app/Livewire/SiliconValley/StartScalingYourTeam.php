@@ -82,7 +82,7 @@ class StartScalingYourTeam extends Component
         $this->subtitle = $ssty['SSYT']['subtitle'] ?? 'Empower your business with flexible, scalable staffing solutions';
         $this->formtitle = $ssty['SSYT']['formtitle'] ?? 'Talk to Our Experts';
         $this->formsubtitle = $ssty['SSYT']['formsubtitle'] ?? 'Kickstart Your Digital Journey Today';
-        $this->formbtntext = $ssty['SSYT']['formbtntext'] ?? 'Book a 30 mins strategy call';
+        $this->formbtntext = $ssty['SSYT']['formbtntext'] ?? 'Submit';
         $this->points = $ssty['SSYT']['points'] ?? [['title'=>'Submit Your Details','subtitle'=>'Your privacy is our priority, and your information is safe with us.'],['title'=>'What Happens Next?','subtitle'=>'A Growth Manager will reach out to you shortly.']];
     }
 
