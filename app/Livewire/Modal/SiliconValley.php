@@ -18,6 +18,8 @@ class SiliconValley extends Component
     
     public $errorMessage = '';
 
+    public $buttonText = 'Submit';
+
     public $stack = [
         ['title' => '', 'description' => '']
     ];

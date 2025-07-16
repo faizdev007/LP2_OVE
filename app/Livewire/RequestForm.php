@@ -13,11 +13,15 @@ use Livewire\Component;
 
 class RequestForm extends Component
 {
-    public $successMessage,$errorMessage,$name,$email,$phone,$project_brief;
+    public $successMessage,$errorMessage,$name,$email,$phone,$project_brief,$buttonText=null;
+
+    public function mount($buttonText = null)
+    {
+        $this->buttonText = $buttonText;
+    }
 
     public function submitquery(Request $request)
     {
-        dd($this);
         try {
             $this->validate([
                 'name' => ['required'],

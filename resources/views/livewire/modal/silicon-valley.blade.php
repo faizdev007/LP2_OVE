@@ -1,3 +1,4 @@
+@props(['buttonText' => null])
 <div>
     @if(Route::currentRouteName() === 'livewire.update' && auth()->check())
     {{-- Nothing in the world is as soft and yielding as water. --}}
@@ -165,7 +166,7 @@
                 <h2 class="text-xl md:text-3xl font-bold  text-white text-center px-6">{{$formtitle}}</h2>
             </flux:heading>
             <h2 class="md:text-xl text-md text-center py-2  text-white">{{$formsubtitle}}</h2>
-            <livewire:request-form inputClass="text-white"/>
+            <livewire:request-form :buttonText="$buttonText" inputClass="text-white"/>
         </div>
     </div>
     @endif
