@@ -1,5 +1,5 @@
 <x-layouts.page.siliconvalley :seo="$seo??['metaTitle'=>'','metaDescription'=>'']" :title="__('Optimal Virtual Employee')">
-    <div class="py-20 bg-sv-primary/80">
+    <div class="py-20 bg-sv-primary">
         <div class="max-w-4xl mx-auto px-6 py-12 text-white">
             <h1 class="text-4xl font-bold mb-8 text-center">Privacy Policy</h1>
 
