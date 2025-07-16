@@ -99,6 +99,10 @@
                 </div>
             @endforeach
         </div>
+        <div class="text-center mt-12 p-2 text-white lg:text-lg text-sm">
+            <p>Copyright © 2009-2025. All Rights Reserved.</p>
+            <p>All client agreements shall be through Optimal Virtual Employee Pvt. Ltd. | <a href="{{route('privacy_policy')}}" target="_blank" class="text-sv-secondary underline"> Privacy Policy </a></p>
+        </div>
     </div>
     @endif
 </div>

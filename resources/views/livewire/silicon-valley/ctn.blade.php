@@ -7,8 +7,4 @@
             <x-silicon-valley.action-button class="" x-data="" x-on:click.prevent="$dispatch('open-modal', 'Hire Now')" title="Talk to Us" class="hover:bg-sv-secondary/50 text-lg md:text-xl 2xl:text-3xl" />
         </flux:modal.trigger>
     </div>
-    <div class="text-center mt-8 text-white md:text-md text-xs">
-        <p>Copyright © 2009-2025. All Rights Reserved.</p>
-        <p>All client agreements shall be through Optimal Virtual Employee Pvt. Ltd. | <a href="{{route('privacy_policy')}}" target="_blank" class="text-sv-primary underline"> Privacy Policy </a></p>
-    </div>
 </div>
