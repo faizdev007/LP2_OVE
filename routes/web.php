@@ -81,6 +81,13 @@ Route::get('/thankyou',function(){
         ]]);
 })->name('thankyou');
 
+Route::get('/privacy_policy',function(){
+    return view('privacy_policy',['seo'=>[
+            'metaTitle'=>'SaaS, Web & Mobile Development | eCommerce, UI/UX, API Integration Services - OVE',
+            'metaDescription'=>'Partner with OVE for scalable SaaS solutions, custom web apps, mobile development, UI/UX design, and API integration. Book a free consultation today.',
+        ]]);
+})->name('privacy_policy');
+
 Route::get('/{lp_data}',function(LandingPage $lp_data){
     $data =  isset($lp_data['page_contect']) ? json_decode($lp_data['page_contect'],true) : [];
 

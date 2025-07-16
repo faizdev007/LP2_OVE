@@ -8,5 +8,6 @@
     <livewire:silicon-valley.hiring-process :lp_data="$lp_data ?? []"/>
     <livewire:silicon-valley.tech-team :lp_data="$lp_data ?? []"/>
     <livewire:silicon-valley.start-scaling-your-team :lp_data="$lp_data ?? []"/>
+    <livewire:silicon-valley.ctn :lp_data="$lp_data ?? []"/>
     <livewire:silicon-valley.our-offices :lp_data="$lp_data ?? []"/>
 </x-layouts.page.siliconvalley>
