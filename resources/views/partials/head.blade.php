@@ -10,9 +10,9 @@
 <link rel="icon" href="{{asset('/favicon.svg')}}" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{{asset('/favicon.svg')}}">
 
-@vite(['resources/css/app.css', 'resources/js/app.js'])
-<!-- <link rel="stylesheet" href="{{ asset('build/assets/app-DEA-OAAR.css') }}">
-<script src="{{ asset('build/assets/app-l0sNRNKZ.js') }}" defer></script> -->
+<!-- @vite(['resources/css/app.css', 'resources/js/app.js']) -->
+<link rel="stylesheet" href="{{ asset('build/assets/app-DEA-OAAR.css') }}">
+<script src="{{ asset('build/assets/app-l0sNRNKZ.js') }}" defer></script>
 @fluxAppearance
 
 <!-- Google Tag Manager -->
