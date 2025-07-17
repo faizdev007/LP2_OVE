@@ -1,7 +1,7 @@
 <div class="overflow-hidden bg-sv-gradient-topbottom text-white">
     {{-- Close your eyes. Count to one. That is how long forever feels. --}}
     @if(Route::currentRouteName() === 'create_lp_content' || Route::currentRouteName() === 'livewire.update' && auth()->check())
-        <fieldset class="container relative text-white max-w-6xl p-4 rounded mx-auto border-2 border-white">
+        <fieldset class="container relative text-white max-w-6xl p-4 my-10 rounded mx-auto border-2 border-white">
         <x-messagestatus :successMessage="$successMessage" :errorMessage="$errorMessage"></x-messagestatus>
         <legend class="text-xl font-bold text-white  markque px-2">Paragraph with Slider Text Section</legend>
         <p>Customize Paragraph and Slider Text for SiliconValley landing page.</p>

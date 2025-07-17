@@ -13,7 +13,7 @@ class DevProfile extends Component
 {
     use WithFileUploads;
 
-    public $lp_data,$devProfile = [];
+    public $lp_data,$devProfile = [], $removeImg = [];
     public $successMessage = '';
     public $errorMessage = '';
     
@@ -76,6 +76,12 @@ class DevProfile extends Component
 
     public function removeProfile($index)
     {
+        $this->removeImg[] = $this->devProfile[$index]['image'];
+        foreach($this->devProfile[$index]['projects'] as $single){
+            if(isset($single)){
+                $this->removeImg[] = $single; 
+            }
+        }
         unset($this->devProfile[$index]);
         $this->devProfile = array_values($this->devProfile); // Reindex
     }
@@ -91,7 +97,11 @@ class DevProfile extends Component
                     "devProfile.$key.projects" => 'required|array',
                 ]);
 
-
+                if(isset($this->removeImg)){
+                    foreach($this->removeImg as $single){
+                        HelperFacade::removeFile($single);
+                    }
+                }
 
                 if(isObject($value['image'])){
                     $this->devProfile[$key]['image'] = HelperFacade::uploadFile($value['image'], 'siliconvalley/devprofile/photo');
@@ -104,10 +114,11 @@ class DevProfile extends Component
                 }
             }
 
-            $contentdata = isset($this->lp_data['page_contect']) ? json_decode($this->lp_data['page_contect'], true) : [];
-            
-            $contentdata['devProfile'] = $this->devProfile;
+            $contentdata = isset($this->lp_data['page_contect']) ? json_decode($this->lp_data['page_contect'], true) : null;
 
+            
+            $contentdata['devProfile'] = count($this->devProfile) ? $this->devProfile : null;
+            
             // Update the landing page content
             LandingPagePatch::update($this->lp_data, $contentdata);
 

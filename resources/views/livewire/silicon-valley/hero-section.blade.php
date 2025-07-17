@@ -1,7 +1,7 @@
 <div class="py-6 border-b border-white bg-sv-gradient text-white herobg">
     {{-- If your happiness depends on money, you will never be happy with yourself. --}}
     @if(Route::currentRouteName() === 'create_lp_content' || Route::currentRouteName() === 'livewire.update' && auth()->check())
-    <fieldset class="container relative text-white max-w-6xl p-4 rounded mx-auto border-2 border-white">
+    <fieldset class="container relative text-white max-w-6xl p-4 my-20 rounded mx-auto border-2 border-white">
         <x-messagestatus :successMessage="$successMessage" :errorMessage="$errorMessage"></x-messagestatus>
         <legend class="text-xl font-bold text-white  markque px-2">Hero Section</legend>
         <p>Customize the hero section of your SiliconValley landing page.</p>

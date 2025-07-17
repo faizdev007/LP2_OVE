@@ -15,7 +15,7 @@
             </div>
             <div class="z-20 relative flex justify-center">
                 <flux:modal.trigger name="book-a-call">
-                    <x-silicon-valley.action-button class="" x-data="" x-on:click.prevent="$dispatch('open-modal', 'Hire Now')" title="lets talk to {{$devProfile['name']}}" class="hover:bg-sv-secondary/50 text-lg md:text-xl 2xl:text-3xl" />
+                    <x-silicon-valley.action-button class="" x-data="" x-on:click.prevent="$dispatch('open-modal', 'Hire Now')" title="lets talk to {{$devProfile['name']}}" class="hover:bg-sv-secondary/50 text-sm md:text-lg 2xl:text-3xl" />
                 </flux:modal.trigger>
             </div>
         </div>

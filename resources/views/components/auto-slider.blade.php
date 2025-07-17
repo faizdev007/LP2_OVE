@@ -142,7 +142,7 @@
     x-init="init()"
     @mouseenter="pauseAutoSlide"
     @mouseleave="resumeAutoSlide"
-    class="relative w-full overflow-hidden"
+    class="relative w-full overflow-hidden md:px-4"
 >
     <!-- Left Arrow -->
     <template x-if="showNav && isScrollable">

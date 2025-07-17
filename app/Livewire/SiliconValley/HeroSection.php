@@ -47,7 +47,6 @@ class HeroSection extends Component
 
     public function save()
     {
-        // dd($this);
         try {
             //code...
             $this->validate([
@@ -59,7 +58,7 @@ class HeroSection extends Component
 
             foreach ($this->removeImg as $key => $value) {
                 if (is_string($value)) {
-                    HelperFacade::deleteFile($value);
+                    HelperFacade::removeFile($value);
                 }
             }
 
