@@ -1,4 +1,4 @@
-<div class="py-12 scroll-mt-20 bg-sv-primary" section="AI-ET">
+<div class="py-12 scroll-mt-20 bg-bacancy-primary" section="AI-ET">
     {{-- Nothing in the world is as soft and yielding as water. --}}
     @if(Route::currentRouteName() === 'create_lp_content' || Route::currentRouteName() === 'livewire.update' && auth()->check())
         <div class="py-4">
@@ -143,13 +143,13 @@
     @else
     <div class="relative md:flex grid flex-1 gap-4 px-4 py-2 sm:px-6 lg:px-8 overflow-hidden mx-auto ">
         <div class="w-full flex-1 flex pt-10 justify-between flex-col mx-auto">
-            <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-5">
                 <flux:heading class="">
                     <h2 class="xl:text-3xl font-[900] text-white">{{$aiblock_title}}</h2>
                 </flux:heading>
                 <p class="mt-2 text-white text-3xl !font-[400] xl:text-4xl mb-6">{{$aiblock_watchword}}</p>
+                <p class="text-white text-lg xl:text-xl md:text-sm mb-6">{{$aiblock_subtitle}}</p>
             </div>
-            <p class="text-white text-lg xl:text-xl md:text-sm mb-6">{{$aiblock_subtitle}}</p>
             <flux:modal.trigger name="book-a-call">
                 <x-action-button x-data="" x-on:click.prevent="$dispatch('open-modal', 'book-a-call')" title="{{ $btntext }}" class="!text-white w-max !bg-black hover:!bg-gray-800 2xl:text-[1.5rem] focus:!ring-[#000000]" />
             </flux:modal.trigger>

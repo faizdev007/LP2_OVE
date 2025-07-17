@@ -85,7 +85,7 @@
             </fieldset>
         </div>
     @else
-        <div class="relative py-2 pb-6 flex-1 overflow-hidden mx-auto md:px-4 dark:border-neutral-700">
+        <div class="relative pt-10 py-2 pb-6 flex-1 overflow-hidden mx-auto md:px-4 dark:border-neutral-700">
             <div class="md:grid lg:grid-cols-3 md:grid-cols-2 items-center justify-center">
                 <div class="flex-1 grid lg:col-span-2 xl:gap-6 md:py-0 py-3 gap-2 xl:gap-4 2xl:gap-6 px-6">
                     <h1 class="text-3xl xl:text-[2.6rem] 2xl:text-[3.5rem] font-extrabold text-gray-900 ">{{$hero_title_one}} <span class="text-bacancy-primary">{{$hero_title_two}}</span> {{$hero_title_three}}</h1>
@@ -98,7 +98,7 @@
                             @foreach($list as $item)
                                 <li class="text-gray-900 flex gap-2">
                                     <span class="text-bacancy-primary">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="xl:size-9 2xl:size-10 size-6">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="xl:size-8 2xl:size-10 size-6">
                                             <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" />
                                         </svg>
                                     </span>
@@ -120,13 +120,13 @@
                     <div class="absolute rounded-full w-full h-full z-30 p-2">
                         <div class="relative w-full h-full">
                             <div class="bg-white absolute w-[30%] top-[20%] xl:text-3xl text-xl font-bold text-center text-black border p-2 border-bacancy-primary rounded-md">{{$box1}}
-                                <div class="text-bacancy-primary font-bold lg:text-lg text-[13px] text-wrap">{{$boxtextone}}</div>
+                                <div class="text-bacancy-primary font-bold 2xl:text-xl xl:text-md text-xs text-wrap">{{$boxtextone}}</div>
                             </div>
                             <div class="bg-white absolute w-[30%] top-[26%] xl:text-3xl text-xl font-bold text-center end-0 text-black p-2 border border-bacancy-primary rounded-md">{{$box2}}
-                                <div class="text-bacancy-primary font-bold lg:text-lg text-[13px]">{{$boxtexttwo}}</div>
+                                <div class="text-bacancy-primary font-bold 2xl:text-xl xl:text-md text-xs">{{$boxtexttwo}}</div>
                             </div>
                             <div class="bg-white absolute w-[30%] bottom-[20%] end-[10%] xl:text-3xl text-xl text-center font-bold text-black border p-2 border-bacancy-primary rounded-md">{{$box3}}
-                                <div class="text-bacancy-primary font-bold lg:text-lg text-[13px]">{{$boxtextthree}}</div>
+                                <div class="text-bacancy-primary font-bold 2xl:text-xl xl:text-md text-xs">{{$boxtextthree}}</div>
                             </div>
                         </div>
                     </div>

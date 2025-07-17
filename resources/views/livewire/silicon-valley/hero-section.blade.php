@@ -112,12 +112,12 @@
                         <div class="md:text-xl lg:text-[30px] 2xl:text-[40px] text-xl font-extrabold vast-shadow-bold">{!!$hero_shorttext!!}</div>
                     </div>
                     <flux:modal.trigger name="book-a-call">
-                        <x-silicon-valley.action-button class="" x-data="" x-on:click.prevent="$dispatch('open-modal', 'Hire Now')" title="{{ $buttonText }}" class="hover:bg-sv-secondary/50 text-lg md:text-xl 2xl:text-3xl" />
+                        <x-silicon-valley.action-button class="" x-data="" x-on:click.prevent="$dispatch('open-modal', 'Hire Now')" title="{{ $buttonText }}" class="hover:bg-sv-secondary/50 text-sm md:text-xl 2xl:text-3xl" />
                     </flux:modal.trigger>
                 </div>
             </div>
             <div class="md:w-[40%] w-full flex justify-center items-center relative">
-                <div class="aspect-[1.3/2] rounded-xl p-1 lg:h-3/4 md:h-2/3 w-1/2 md:w-auto border-2 border-white relative">
+                <div class="aspect-[1.3/2] rounded-xl p-1 lg:h-3/4 md:h-2/3 md:w-1/2 w-2/3 md:w-auto border-2 border-white relative">
                     <img loading="lazy" class="aspect-[1.3/2] object-cover rounded-xl h-full absolute top-2 start-2" src="{{asset($heroPortfolio['image'])}}"/>
                     <div class="w-full h-full relative">
                         <div class="bg-white shadow-md aspect-[1.5/1] 2xl:h-18 h-12 md:h-16 flex justify-center  animate-[bounce_2.7s_ease-in-out_infinite] max-w-auto p-2 rounded absolute top-5 -start-10">
